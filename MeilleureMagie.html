@@ -7,7 +7,7 @@
            <!-- Modal content -->
            <div class="modal-content">
                <h1 id="nomDuSort">Informations concernant le sort cliqu&eacute; : </h1>
-               <p id="descriptionDuSort"><b><u>Description du sort</u></b></p>
+               <h9 id="descriptionDuSort"><b><u>Description du sort</u></b></h9>
 
            </div>
          
@@ -58,6 +58,12 @@
               margin-bottom: 0;
               padding: 0;
               line-height: 20px;
+              color: black;
+             }
+
+             p:hover {
+               cursor: pointer;
+               color: #789B51;
              }
 
             /*----------------Menu--------------------*/
@@ -110,14 +116,20 @@
    </head>
    <div class="global">
        <div class="menu">
-         <a class="menuItem">Accueil</a>
+         <a class="menuItem" href="accueil.html">Accueil</a>
          <a class="menuItem" href="VCharacterDesigner.html">Aide &agrave; la cr&eacute;ation de personnage</a>
+         <a class="menuItem" href="CarteVersebockComplete.html">Carte compl&egrave;te du monde de Vers&eacute;bock</a>
          <a class="menuItem" href="GrilleMonteeNiveau.html">Grille de mont&eacute;e de niveau interractive</a>
+         <a class="menuItem">Meilleure Magie</a>
+
        </div>
        <div class="contenu">
+         <div style="margin-left:20px">
          <h1 class="contenuItem">Meilleure magie : </h1>
-         <p class="contenuItem" style="font-size:20px">Cet outil permet de visualiser les diff&eacute;rents sorts qu'une classe x &agrave; acc&egrave;s &agrave; chaque niveau
-            ET de conna&icirc;tre l'effet de ces sorts. Pour avoir plus d'informations sur un sort, vous n'avez qu'&agrave; cliquer dessus</p>
+         <h9 class="contenuItem" style="font-size:20px;">Cet outil permet de visualiser les diff&eacute;rents sorts auquels une classe &agrave; 
+            acc&egrave;s &agrave; chaque niveau
+            ET de conna&icirc;tre l'effet de ces sorts. Pour avoir plus d'informations sur un sort, vous n'avez qu'&agrave; cliquer dessus</h9>
+         </div> 
           <div> <!--Barde-->
             <h2><br>Charmes bardiques</h2>
             <div class="colonne1">
@@ -321,7 +333,7 @@
                      
             <p class="contenuItem" onclick="openModal('peau decorceD')">Peau d&#39;&eacute;corce : Niveau 2</p>
                      
-            <p class="contenuItem" onclick="openModal('** don de vieD')">** Don de vie</p>
+            <p class="contenuItem" onclick="openModal('**don de vieD')">**Don de vie</p>
                      
             <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 5</h3>
             <p class="contenuItem" onclick="openModal('aveuglementD')">Aveuglement</p>
@@ -377,116 +389,78 @@
           <div> <!--Nécromancien-->
             <h2><br>Sorts n&eacute;crotiques</h2>
             <div class="colonne1">
-               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 1</h3>
-               <p class="contenuItem" onclick="openModal('blessureN')">Blessure : Niveau 1</p>
-                        
-               <p class="contenuItem" onclick="openModal('forceN')">Force : Niveau 1</p>
-                        
-               <p class="contenuItem" onclick="openModal('frissonN')">Frisson : Niveau 1</p>
-                        
-               <p class="contenuItem" onclick="openModal('mortalite : nivau 1N')">Mortalit&eacute; : Nivau 1</p>
-                        
-               <p class="contenuItem" onclick="openModal('perception des mortsN')">Perception des morts</p>
-                        
-               <p class="contenuItem" onclick="openModal('toucher putrideN')">Toucher putride</p>
-                        
-               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 2</h3>
-               <p class="contenuItem" onclick="openModal('malediction du corbeauN')">Mal&eacute;diction du corbeau mineur</p>
-                        
-               <p class="contenuItem" onclick="openModal('membre mouN')">Membre mou</p>
-                        
-               <p class="contenuItem" onclick="openModal('mortaliteN')">Mortalit&eacute; : Niveau 2</p>
-                        
-               <p class="contenuItem" onclick="openModal('parole des amesN')">Parole des &acirc;mes</p>
-                        
-               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 3</h3>
-               <p class="contenuItem" onclick="openModal('arme magiqueN')">Arme magique : Niveau 1</p>
-                        
-               <p class="contenuItem" onclick="openModal('blessureN')">Blessure : Niveau 2</p>
-                        
-               <p class="contenuItem" onclick="openModal('eveil du mort affaibliN')">&Eacute;veil du mort affaibli</p>
-                        
-               <p class="contenuItem" onclick="openModal('forceN')">Force : Niveau 2</p>
-                        
-               <p class="contenuItem" onclick="openModal('frappe du cadavreN')">Frappe du cadavre mineur</p>
-                        
-               <p class="contenuItem" onclick="openModal('frayeurN')">Frayeur mineur</p>
-                        
-               <p class="contenuItem" onclick="openModal('retour en poussiereN')">Retour en poussi&egrave;re mineur</p>
-                        
-               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 4</h3>
-               <p class="contenuItem" onclick="openModal('creation de source de sangN')">Cr&eacute;ation de source de sang</p>
-                        
-               <p class="contenuItem" onclick="openModal('frissonN')">Frisson : Niveau 2</p>
-                        
-               <p class="contenuItem" onclick="openModal('linceul de la mortN')">Linceul de la mort : Niveau 1</p>
-                        
-               <p class="contenuItem" onclick="openModal('malediction du corbeauN')">Mal&eacute;diction du corbeau normal</p>
-                        
-               <p class="contenuItem" onclick="openModal('mortaliteN')">Mortalit&eacute; : Niveau 3</p>
-                        
-               <p class="contenuItem" onclick="openModal('siphon de sangN')">Siphon de sang mineur</p>
-                        
-               <p class="contenuItem" onclick="openModal('transfusion morbideN')">Transfusion morbide</p>
-                        
-               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 5</h3>
-               <p class="contenuItem" onclick="openModal('blessureN')">Blessure : Niveau 3</p>
-                        
-               <p class="contenuItem" onclick="openModal('dissipation de cercle de protectionN')">Dissipation de cercle de protection</p>
-                        
-               <p class="contenuItem" onclick="openModal('eveil du zombie communN')">&Eacute;veil du zombie commun</p>
-                        
-               <p class="contenuItem" onclick="openModal('frayeurN')">Frayeur majeur</p>
-                        
-               <p class="contenuItem" onclick="openModal('transfusion sanguineN')">Transfusion sanguine</p>
-                        
-            </div>
-            <div class="colonne1">
-               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau6</h3>
-               <p class="contenuItem" onclick="openModal('arme magiqueN')">Arme magique : Niveau 2</p>
-            
-               <p class="contenuItem" onclick="openModal('linceul de la mortN')">Linceul de la mort : Niveau 2</p>
-            
-               <p class="contenuItem" onclick="openModal('malediction du corbeauN')">Mal&eacute;diction du corbeau majeure</p>
-            
-               <p class="contenuItem" onclick="openModal('mortaliteN')">Mortalit&eacute; : Niveau 4</p>
-            
-               <p class="contenuItem" onclick="openModal('siphon de sangN')">Siphon de sang majeur</p>
-            
-               <p class="contenuItem" onclick="openModal('souvenir dune mortN')">Souvenir d&#39;une mort</p>
-            
-               <p class="contenuItem" onclick="openModal('toucher anti-magiqueN')">Toucher anti-magique</p>
-            
-               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau7</h3>
-               <p class="contenuItem" onclick="openModal('blessureN')">Blessure : Niveau 4</p>
-            
-               <p class="contenuItem" onclick="openModal('mortaliteN')">Mortalit&eacute; : Niveau 5</p>
-            
-               <p class="contenuItem" onclick="openModal('vade retro mordicusN')">Vade retro mordicus</p>
-            
-               <p class="contenuItem" onclick="openModal('zone putrideN')">Zone putride</p>
-            
-               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau8</h3>
-               <p class="contenuItem" onclick="openModal('frappe du cadavreN')">Frappe du cadavre majeur</p>
-            
-               <p class="contenuItem" onclick="openModal('frayeurN')">Frayeur sup&eacute;rieure</p>
-            
-               <p class="contenuItem" onclick="openModal('immunite contre les sorts et les charmesN')">Immunit&eacute; contre les sorts et les charmes</p>
-            
-               <p class="contenuItem" onclick="openModal('mortaliteN')">Mortalit&eacute; : Niveau 6</p>
-            
-               <p class="contenuItem" onclick="openModal('vade retro angelusN')">Vade retro Angelus : Niveau 1</p>
-            
-               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau9</h3>
-               <p class="contenuItem" onclick="openModal('frayeurN')">Frayeur ultime</p>
-            
-               <p class="contenuItem" onclick="openModal('onde anti-magieN')">Onde anti-magie</p>
-            
-               <p class="contenuItem" onclick="openModal('siphon de sangN')">Siphon de sang ultime</p>
-            
-               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau10</h3>
-               <p class="contenuItem" onclick="openModal('vade retro angelusN')">Vade retro Angelus : Niveau 2</p>
-            </div>
+
+   <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 1</h3>
+   <p class="contenuItem" onclick="openModal('blessureN')">Blessure : Niveau 1</p>
+   <p class="contenuItem" onclick="openModal('forceN')">Force : Niveau 1</p>
+   <p class="contenuItem" onclick="openModal('frissonN')">Frisson : Niveau 1</p>
+   <p class="contenuItem" onclick="openModal('mortalite : nivau 1N')">Mortalit&eacute; : Nivau 1</p>
+   <p class="contenuItem" onclick="openModal('perception des mortsN')">Perception des morts</p>
+   <p class="contenuItem" onclick="openModal('toucher putrideN')">Toucher putride</p>
+
+   <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 2</h3>
+   <p class="contenuItem" onclick="openModal('malediction du corbeauN')">Mal&eacute;diction du corbeau mineur</p>
+   <p class="contenuItem" onclick="openModal('membre mouN')">Membre mou</p>
+   <p class="contenuItem" onclick="openModal('mortaliteN')">Mortalit&eacute; : Niveau 2</p>
+   <p class="contenuItem" onclick="openModal('parole des amesN')">Parole des &acirc;mes</p>
+
+   <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 3</h3>
+   <p class="contenuItem" onclick="openModal('arme magiqueN')">Arme magique : Niveau 1</p>
+   <p class="contenuItem" onclick="openModal('blessureN')">Blessure : Niveau 2</p>
+   <p class="contenuItem" onclick="openModal('eveil du mort affaibliN')">&Eacute;veil du mort affaibli</p>
+   <p class="contenuItem" onclick="openModal('forceN')">Force : Niveau 2</p>
+   <p class="contenuItem" onclick="openModal('frappe du cadavreN')">Frappe du cadavre mineur</p>
+   <p class="contenuItem" onclick="openModal('frayeurN')">Frayeur mineur</p>
+   <p class="contenuItem" onclick="openModal('retour en poussiereN')">Retour en poussi&egrave;re mineur</p>
+
+   <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 4</h3>
+   <p class="contenuItem" onclick="openModal('creation de source de sangN')">Cr&eacute;ation de source de sang</p>
+   <p class="contenuItem" onclick="openModal('frissonN')">Frisson : Niveau 2</p>
+   <p class="contenuItem" onclick="openModal('linceul de la mortN')">Linceul de la mort : Niveau 1</p>
+   <p class="contenuItem" onclick="openModal('malediction du corbeauN')">Mal&eacute;diction du corbeau normal</p>
+   <p class="contenuItem" onclick="openModal('mortaliteN')">Mortalit&eacute; : Niveau 3</p>
+   <p class="contenuItem" onclick="openModal('siphon de sangN')">Siphon de sang mineur</p>
+   <p class="contenuItem" onclick="openModal('transfusion morbideN')">Transfusion morbide</p>
+
+   <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 5</h3>
+   <p class="contenuItem" onclick="openModal('blessureN')">Blessure : Niveau 3</p>
+   <p class="contenuItem" onclick="openModal('dissipation de cercle de protectionN')">Dissipation de cercle de protection</p>
+   <p class="contenuItem" onclick="openModal('eveil du zombie communN')">&Eacute;veil du zombie commun</p>
+   <p class="contenuItem" onclick="openModal('frayeurN')">Frayeur majeur</p>
+   <p class="contenuItem" onclick="openModal('transfusion sanguineN')">Transfusion sanguine</p>
+</div>
+<div class="colonne1">
+
+   <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 6</h3>
+   <p class="contenuItem" onclick="openModal('arme magiqueN')">Arme magique : Niveau 2</p>
+   <p class="contenuItem" onclick="openModal('linceul de la mortN')">Linceul de la mort : Niveau 2</p>
+   <p class="contenuItem" onclick="openModal('malediction du corbeauN')">Mal&eacute;diction du corbeau majeure</p>
+   <p class="contenuItem" onclick="openModal('mortaliteN')">Mortalit&eacute; : Niveau 4</p>
+   <p class="contenuItem" onclick="openModal('siphon de sangN')">Siphon de sang majeur</p>
+   <p class="contenuItem" onclick="openModal('souvenir dune mortN')">Souvenir d&#39;une mort</p>
+   <p class="contenuItem" onclick="openModal('toucher anti-magiqueN')">Toucher anti-magique</p>
+
+   <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 7</h3>
+   <p class="contenuItem" onclick="openModal('blessureN')">Blessure : Niveau 4</p>
+   <p class="contenuItem" onclick="openModal('mortaliteN')">Mortalit&eacute; : Niveau 5</p>
+   <p class="contenuItem" onclick="openModal('vade retro mordicusN')">Vade retro mordicus</p>
+   <p class="contenuItem" onclick="openModal('zone putrideN')">Zone putride</p>
+
+   <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 8</h3>
+   <p class="contenuItem" onclick="openModal('frappe du cadavreN')">Frappe du cadavre majeur</p>
+   <p class="contenuItem" onclick="openModal('frayeurN')">Frayeur sup&eacute;rieure</p>
+   <p class="contenuItem" onclick="openModal('immunite contre les sorts et les charmesN')">Immunit&eacute; contre les sorts et les charmes</p>
+   <p class="contenuItem" onclick="openModal('mortaliteN')">Mortalit&eacute; : Niveau 6</p>
+   <p class="contenuItem" onclick="openModal('vade retro angelusN')">Vade retro Angelus : Niveau 1</p>
+
+   <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 9</h3>
+   <p class="contenuItem" onclick="openModal('frayeurN')">Frayeur ultime</p>
+   <p class="contenuItem" onclick="openModal('onde anti-magiqueN')">Onde anti-magique</p>
+   <p class="contenuItem" onclick="openModal('siphon de sangN')">Siphon de sang ultime</p>
+
+   <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 10</h3>
+   <p class="contenuItem" onclick="openModal('vade retro angelusN')">Vade retro Angelus : Niveau 2</p>
+</div>
           </div>
           <div> <!--Paladins-->
           <div> <!--Paladin d'Agathos (Le Pur)-->
@@ -810,8 +784,499 @@
            </div>
            <div> <!--Prêtre de Brocal-->
             <h2>Pr&ecirc;tre de Brocal</h2>
+            <div class="colonne1">
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 1</h3>
+               <p class="contenuItem" onclick="openModal('arme magiquePr')">Arme magique niveau 1</p>
+               <p class="contenuItem" onclick="openModal('assistance divinePr')">Assistance divine</p>
+               <p class="contenuItem" onclick="openModal('forcePr')">Force niveau 1</p>
+               <p class="contenuItem" onclick="openModal('guerisonPr')">Gu&eacute;rison niveau 1</p>
+               <p class="contenuItem" onclick="openModal('nuisancePr')">Nuisance niveau 1</p>
+               <p class="contenuItem" onclick="openModal('vitalitePr')">Vitalit&eacute; niveau 1</p>
+
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 2</h3>
+               <p class="contenuItem" onclick="openModal('blessurePr')">Blessure niveau 1</p>
+               <p class="contenuItem" onclick="openModal('forcePr')">Force niveau 2</p>
+               <p class="contenuItem" onclick="openModal('nuisancePr')">Nuisance niveau 2</p>
+               <p class="contenuItem" onclick="openModal('resistance a la peurPr')">R&eacute;sistance &agrave; la peur</p>
+               <p class="contenuItem" onclick="openModal('vitalitePr')">Vitalit&eacute; niveau 2</p>
+
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 3</h3>
+               <p class="contenuItem" onclick="openModal('anarchiePr')">Anarchie niveau 1</p>
+               <p class="contenuItem" onclick="openModal('arme magiquePr')">Arme magique niveau 2</p>
+               <p class="contenuItem" onclick="openModal('bouclier de la foiPr')">Bouclier de la foi niveau 1</p>
+               <p class="contenuItem" onclick="openModal('frayeurPr')">Frayeur</p>
+
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 4</h3>
+               <p class="contenuItem" onclick="openModal('forcePr')">Force niveau 3</p>
+               <p class="contenuItem" onclick="openModal('guerisonPr')">Gu&eacute;rison niveau 2</p>
+               <p class="contenuItem" onclick="openModal('mutineriePr')">Mutinerie niveau 1</p>
+               <p class="contenuItem" onclick="openModal('nuisancePr')">Nuisance niveau 3</p>
+               <p class="contenuItem" onclick="openModal('resurrectionPr')">R&eacute;surrection niveau 1</p>
+               <p class="contenuItem" onclick="openModal('vitalitePr')">Vitalit&eacute; niveau 3</p>
+
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 5</h3>
+               <p class="contenuItem" onclick="openModal('anarchiePr')">Anarchie niveau 2</p>
+               <p class="contenuItem" onclick="openModal('blessurePr')">Blessure niveau 2</p>
+               <p class="contenuItem" onclick="openModal('cercle de protectionPr')">Cercle de protection</p>
+               <p class="contenuItem" onclick="openModal('dissipation de cercle de protectionPr')">Dissipation de cercle de protection</p>
+               <p class="contenuItem" onclick="openModal('rage incontrôlablePr')">Rage incontrôlable niveau 1</p>
+            </div>
+            <div class="colonne1">
+         
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 6</h3>
+               <p class="contenuItem" onclick="openModal('forcePr')">Force niveau 4</p>
+               <p class="contenuItem" onclick="openModal('mutineriePr')">Mutinerie niveau 2</p>
+               <p class="contenuItem" onclick="openModal('nuisancePr')">Nuisance niveau 4</p>
+               <p class="contenuItem" onclick="openModal('paralysie de verrePr')">Paralysie de verre</p>
+               <p class="contenuItem" onclick="openModal('vitalitePr')">Vitalit&eacute; niveau 4</p>
             
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 7</h3>
+               <p class="contenuItem" onclick="openModal('blessurePr')">Blessure niveau 3</p>
+               <p class="contenuItem" onclick="openModal('malediction des sensPr')">Mal&eacute;diction des sens</p>
+               <p class="contenuItem" onclick="openModal('martyrPr')">Martyr</p>
+               <p class="contenuItem" onclick="openModal('rage incontrôlablePr')">Rage incontrôlable niveau 2</p>
+               <p class="contenuItem" onclick="openModal('resurrectionPr')">R&eacute;surrection niveau 2</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 8</h3>
+               <p class="contenuItem" onclick="openModal('anarchiePr')">Anarchie niveau 3</p>
+               <p class="contenuItem" onclick="openModal('delivrance de la paralysiePr')">D&eacute;livrance de la paralysie</p>
+               <p class="contenuItem" onclick="openModal('esprit impenetrablePr')">Esprit imp&eacute;n&eacute;trable</p>
+               <p class="contenuItem" onclick="openModal('immunite contre les sorts et les charmesPr')">Immunit&eacute; contre les sorts et les charmes</p>
+               <p class="contenuItem" onclick="openModal('mutineriePr')">Mutinerie niveau 3</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 9</h3>
+               <p class="contenuItem" onclick="openModal('rage incontrôlablePr')">Rage incontrôlable niveau 3</p>
+               <p class="contenuItem" onclick="openModal('vade retro mordicusPr')">Vade retro mordicus</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 10</h3>
+               <p class="contenuItem" onclick="openModal('cercle de douleurPr')">Cercle de douleur</p>
+            </div>
+
            </div>
+           <div> <!--Prêtre de Farang-->
+            <h2>Pr&ecirc;tre de Farang</h2>
+            <div class="colonne1">
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 1</h3>
+               <p class="contenuItem" onclick="openModal('assistance divinePr')">Assistance divine</p>
+               <p class="contenuItem" onclick="openModal('forcePr')">Force niveau 1</p>
+               <p class="contenuItem" onclick="openModal('guerisonPr')">Gu&eacute;rison niveau 1</p>
+               <p class="contenuItem" onclick="openModal('purification de leau et de la nourriturePr')">Purification de l&#39;eau et de la nourriture </p>
+               <p class="contenuItem" onclick="openModal('vitalitePr')">Vitalit&eacute; niveau 1</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 2</h3>
+               <p class="contenuItem" onclick="openModal('bouclier de la foiPr')">Bouclier de la foi niveau 1</p>
+               <p class="contenuItem" onclick="openModal('perception de la santePr')">Perception de la sant&eacute;</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 3</h3>
+               <p class="contenuItem" onclick="openModal('benediction de leauPr')">B&eacute;n&eacute;diction de l&#39;eau</p>
+               <p class="contenuItem" onclick="openModal('guerisonPr')">Gu&eacute;rison niveau 2</p>
+               <p class="contenuItem" onclick="openModal('nuisancePr')">Nuisance niveau 1</p>
+               <p class="contenuItem" onclick="openModal('resurrectionPr')">R&eacute;surrection niveau 1</p>
+               <p class="contenuItem" onclick="openModal('vitalitePr')">Vitalit&eacute; niveau 2</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 4</h3>
+               <p class="contenuItem" onclick="openModal('aveuglementPr')">Aveuglement</p>
+               <p class="contenuItem" onclick="openModal('forcePr')">Force niveau 2</p>
+               <p class="contenuItem" onclick="openModal('hesitationPr')">H&eacute;sitation niveau 1</p>
+               <p class="contenuItem" onclick="openModal('repli expeditifPr')">Repli exp&eacute;ditif </p>
+               <p class="contenuItem" onclick="openModal('resistance a la peurPr')">R&eacute;sistance &agrave; la peur</p>
+               <p class="contenuItem" onclick="openModal('vitalitePr')">Vitalit&eacute; niveau 3</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 5</h3>
+               <p class="contenuItem" onclick="openModal('apaisement des emotionsPr')">Apaisement des &eacute;motions</p>
+               <p class="contenuItem" onclick="openModal('arme magiquePr')">Arme magique niveau 1</p>
+               <p class="contenuItem" onclick="openModal('cercle de protectionPr')">Cercle de protection</p>
+               <p class="contenuItem" onclick="openModal('guerisonPr')">Gu&eacute;rison niveau 3</p>
+               <p class="contenuItem" onclick="openModal('neutraliser le poisonPr')">Neutraliser le poison</p>
+               <p class="contenuItem" onclick="openModal('questionneur a repetitionPr')">Questionneur &agrave; r&eacute;p&eacute;tition niveau 1</p>
+            </div>
+            <div class="colonne1">
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 6</h3>
+               <p class="contenuItem" onclick="openModal('bouclier de la foiPr')">Bouclier de la foi niveau 2</p>
+               <p class="contenuItem" onclick="openModal('hesitationPr')">H&eacute;sitation niveau 2</p>
+               <p class="contenuItem" onclick="openModal('nuisancePr')">Nuisance niveau 2</p>
+               <p class="contenuItem" onclick="openModal('souffle courtPr')">Souffle court</p>
+               <p class="contenuItem" onclick="openModal('vitalitePr')">Vitalit&eacute; niveau 4</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 7</h3>
+               <p class="contenuItem" onclick="openModal('delivrance de la paralysiePr')">D&eacute;livrance de la paralysie</p>
+               <p class="contenuItem" onclick="openModal('resurrectionPr')">R&eacute;surrection niveau 2</p>
+               <p class="contenuItem" onclick="openModal('paralysie de verrePr')">Paralysie de verre</p>
+               <p class="contenuItem" onclick="openModal('immunite contre les sort et les charmesPr')">Immunit&eacute; contre les sort et les charmes</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 8</h3>
+               <p class="contenuItem" onclick="openModal('annulation denchantement ou de sortPr')">Annulation d&#39;enchantement ou de sort</p>
+               <p class="contenuItem" onclick="openModal('dissipation du cercle de protectionPr')">Dissipation du cercle de protection</p>
+               <p class="contenuItem" onclick="openModal('hesitationPr')">H&eacute;sitation niveau 3</p>
+               <p class="contenuItem" onclick="openModal('questionneur a repetitionPr')">Questionneur &agrave; r&eacute;p&eacute;tition niveau 2</p>
+               <p class="contenuItem" onclick="openModal('vitalitePr')">Vitalit&eacute; niveau 5</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 9</h3>
+               <p class="contenuItem" onclick="openModal('vade retro mordicusPr')">Vade retro mordicus</p>
+               <p class="contenuItem" onclick="openModal('vade retro satanaPr')">Vade retro satana niveau 1</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 10</h3>
+               <p class="contenuItem" onclick="openModal('renvoi de sortPr')">Renvoi de sort</p>
+               <p class="contenuItem" onclick="openModal('esprit impenetrablePr')">Esprit imp&eacute;n&eacute;trable</p>
+            </div>
+           </div>
+          <div> <!--Prêtre de Gaola-->
+            <h2>Pr&ecirc;tre de Gaola</h2>
+            <div class="colonne1">
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 1</h3>
+               <p class="contenuItem" onclick="openModal('assistance divinePr')">Assistance divine</p>
+               <p class="contenuItem" onclick="openModal('forcePr')">Force niveau 1</p>
+               <p class="contenuItem" onclick="openModal('guerisonPr')">Gu&eacute;rison niveau 1</p>
+               <p class="contenuItem" onclick="openModal('perception de la santePr')">Perception de la sant&eacute;</p>
+               <p class="contenuItem" onclick="openModal('purification de leau et de la nourriturePr')">Purification de l&#39;eau et de la nourriture</p>
+               <p class="contenuItem" onclick="openModal('ralentissement du poisonPr')">Ralentissement du poison</p>
+               <p class="contenuItem" onclick="openModal('resurrectionPr')">R&eacute;surrection niveau 1</p>
+               <p class="contenuItem" onclick="openModal('vitalitePr')">Vitalit&eacute; niveau 1</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 2</h3>
+               <p class="contenuItem" onclick="openModal('benediction de leauPr')">B&eacute;n&eacute;diction de l&#39;eau</p>
+               <p class="contenuItem" onclick="openModal('enchevetrementPr')">Enchev&ecirc;trement</p>
+               <p class="contenuItem" onclick="openModal('nuisancePr')">Nuisance niveau 1</p>
+               <p class="contenuItem" onclick="openModal('peau decorcePr')">Peau d&#39;&eacute;corce niveau 1</p>
+               <p class="contenuItem" onclick="openModal('vitalitePr')">Vitalit&eacute; niveau 2</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 3</h3>
+               <p class="contenuItem" onclick="openModal('arme magiquePr')">Arme magique niveau 1</p>
+               <p class="contenuItem" onclick="openModal('blessurePr')">Blessure niveau 1</p>
+               <p class="contenuItem" onclick="openModal('forcePr')">Force niveau 2</p>
+               <p class="contenuItem" onclick="openModal('guerisonPr')">Gu&eacute;rison niveau 2</p>
+               <p class="contenuItem" onclick="openModal('resurrectionPr')">R&eacute;surrection niveau 2</p>
+               <p class="contenuItem" onclick="openModal('neutraliser le poisonPr')">Neutraliser le poison</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 4</h3>
+               <p class="contenuItem" onclick="openModal('bouclier de la foiPr')">Bouclier de la foi niveau 1</p>
+               <p class="contenuItem" onclick="openModal('nuisancePr')">Nuisance niveau 2</p>
+               <p class="contenuItem" onclick="openModal('peau decorcePr')">Peau d&#39;&eacute;corce niveau 2</p>
+               <p class="contenuItem" onclick="openModal('vitalitePr')">Vitalit&eacute; niveau 3</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 5</h3>
+               <p class="contenuItem" onclick="openModal('cercle de protectionPr')">Cercle de protection</p>
+               <p class="contenuItem" onclick="openModal('delivrance de la paralysiePr')">D&eacute;livrance de la paralysie</p>
+               <p class="contenuItem" onclick="openModal('detection du mensongePr')">D&eacute;tection du mensonge</p>
+               <p class="contenuItem" onclick="openModal('forcePr')">Force niveau 3</p>
+               <p class="contenuItem" onclick="openModal('guerisonPr')">Gu&eacute;rison niveau 3</p>
+               <p class="contenuItem" onclick="openModal('paralysie de verrePr')">Paralysie de verre</p>
+               <p class="contenuItem" onclick="openModal('resistance a la peurPr')">R&eacute;sistance &agrave; la peur</p>
+               <p class="contenuItem" onclick="openModal('resurrectionPr')">R&eacute;surrection niveau 3</p>
+            </div>
+            <div class="colonne1">
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 6</h3>
+               <p class="contenuItem" onclick="openModal('blessurePr')">Blessure niveau 2</p>
+               <p class="contenuItem" onclick="openModal('dissipation du cercle de protectionPr')">Dissipation du cercle de protection</p>
+               <p class="contenuItem" onclick="openModal('guerisonPr')">Gu&eacute;rison niveau 4</p>
+               <p class="contenuItem" onclick="openModal('peau de pierrePr')">Peau de pierre niveau 1</p>
+               <p class="contenuItem" onclick="openModal('souffle courtPr')">Souffle court</p>
+               <p class="contenuItem" onclick="openModal('vitalitePr')">Vitalit&eacute; niveau 4</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 7</h3>
+               <p class="contenuItem" onclick="openModal('bouclier de la foiPr')">Bouclier de la foi niveau 2</p>
+               <p class="contenuItem" onclick="openModal('esprit impenetrablePr')">Esprit imp&eacute;n&eacute;trable</p>
+               <p class="contenuItem" onclick="openModal('forcePr')">Force niveau 4</p>
+               <p class="contenuItem" onclick="openModal('resurrectionPr')">R&eacute;surrection niveau 4</p>
+               <p class="contenuItem" onclick="openModal('vitalitePr')">Vitalit&eacute; niveau 5</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 8</h3>
+               <p class="contenuItem" onclick="openModal('annulation denchantement ou de sortPr')">Annulation d&#39;enchantement ou de sort</p>
+               <p class="contenuItem" onclick="openModal('arme magiquePr')">Arme magique niveau 2</p>
+               <p class="contenuItem" onclick="openModal('curePr')">Cure</p>
+               <p class="contenuItem" onclick="openModal('peau de pierrePr')">Peau de pierre niveau 2</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 9</h3>
+               <p class="contenuItem" onclick="openModal('vade retro mordicusPr')">Vade retro Mordicus</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 10</h3>
+               <p class="contenuItem" onclick="openModal('renvoi de sortPr')">Renvoi de sort</p>
+            </div>
+          </div>
+          <div> <!--Prêtre de Miédal-->
+            <h2>Pr&ecirc;tre de Mi&eacute;dal</h2>
+            <div class="colonne1">
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 1</h3>
+               <p class="contenuItem" onclick="openModal('blessurePr')">Blessure niveau 1 </p>
+               <p class="contenuItem" onclick="openModal('forcePr')">Force niveau 1</p>
+               <p class="contenuItem" onclick="openModal('guerisonPr')">Gu&eacute;rison niveau 1</p>
+               <p class="contenuItem" onclick="openModal('malediction de leauPr')">Mal&eacute;diction de l&#39;eau</p>
+               <p class="contenuItem" onclick="openModal('nuisancePr')">Nuisance niveau 1</p>
+               <p class="contenuItem" onclick="openModal('vitalitePr')">Vitalit&eacute; niveau 1</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 2</h3>
+               <p class="contenuItem" onclick="openModal('assistance divinePr')">Assistance divine</p>
+               <p class="contenuItem" onclick="openModal('blessurePr')">Blessure niveau 2</p>
+               <p class="contenuItem" onclick="openModal('resistance a la peurPr')">R&eacute;sistance &agrave; la peur</p>
+               <p class="contenuItem" onclick="openModal('vitalitePr')">Vitalit&eacute; niveau 2</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 3</h3>
+               <p class="contenuItem" onclick="openModal('arme magiquePr')">Arme magique niveau 1</p>
+               <p class="contenuItem" onclick="openModal('forcePr')">Force niveau 2</p>
+               <p class="contenuItem" onclick="openModal('frayeurPr')">Frayeur</p>
+               <p class="contenuItem" onclick="openModal('guerisonPr')">Gu&eacute;rison niveau 2</p>
+               <p class="contenuItem" onclick="openModal('main brulantePr')">Main br&ucirc;lante  </p>
+               <p class="contenuItem" onclick="openModal('nuisancePr')">Nuisance niveau 2</p>
+               <p class="contenuItem" onclick="openModal('perception de la santePr')">Perception de la sant&eacute; </p>
+               <p class="contenuItem" onclick="openModal('resurrectionPr')">R&eacute;surrection niveau 1</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 4</h3>
+               <p class="contenuItem" onclick="openModal('blessurePr')">Blessure niveau 3</p>
+               <p class="contenuItem" onclick="openModal('bouclier de la foiPr')">Bouclier de la foi niveau 1</p>
+               <p class="contenuItem" onclick="openModal('paralysie de verrePr')">Paralysie de verre</p>
+               <p class="contenuItem" onclick="openModal('vitalitePr')">Vitalit&eacute; niveau 3</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 5</h3>
+               <p class="contenuItem" onclick="openModal('cercle de protectionPr')">Cercle de protection</p>
+               <p class="contenuItem" onclick="openModal('forcePr')">Force niveau 3</p>
+               <p class="contenuItem" onclick="openModal('nuisancePr')">Nuisance niveau 3</p>
+               <p class="contenuItem" onclick="openModal('resurrectionPr')">R&eacute;surrection niveau 2</p>
+            </div>
+            <div class="colonne1">
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 6</h3>
+               <p class="contenuItem" onclick="openModal('blessurePr')">Blessure niveau 4</p>
+               <p class="contenuItem" onclick="openModal('cercle de douleurPr')">Cercle de douleur</p>
+               <p class="contenuItem" onclick="openModal('dissipation du cercle de protectionPr')">Dissipation du cercle de protection</p>
+               <p class="contenuItem" onclick="openModal('guerisonPr')">Gu&eacute;rison niveau 3</p>
+               <p class="contenuItem" onclick="openModal('vitalitePr')">Vitalit&eacute; niveau 4</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 7</h3>
+               <p class="contenuItem" onclick="openModal('delivrance de la paralysiePr')">D&eacute;livrance de la paralysie</p>
+               <p class="contenuItem" onclick="openModal('membre possedePr')">Membre poss&eacute;d&eacute; niveau 1</p>
+               <p class="contenuItem" onclick="openModal('nuisancePr')">Nuisance niveau 4</p>
+               <p class="contenuItem" onclick="openModal('vitalitePr')">Vitalit&eacute; niveau 5</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 8</h3>
+               <p class="contenuItem" onclick="openModal('arme magiquePr')">Arme magique niveau 2</p>
+               <p class="contenuItem" onclick="openModal('bouclier de la foiPr')">Bouclier de la foi niveau 2</p>
+               <p class="contenuItem" onclick="openModal('malediction des soinsPr')">Mal&eacute;diction des soins</p>
+               <p class="contenuItem" onclick="openModal('vade retro angelusPr')">Vade retro Angelus niveau 1</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 9</h3>
+               <p class="contenuItem" onclick="openModal('esprit impenetrablePr')">Esprit imp&eacute;n&eacute;trable</p>
+               <p class="contenuItem" onclick="openModal('membre possedePr')">Membre poss&eacute;d&eacute; niveau 2</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 10</h3>
+               <p class="contenuItem" onclick="openModal('renvoi de sortPr')">Renvoi de sort</p>
+               <p class="contenuItem" onclick="openModal('resurrectionPr')">R&eacute;surrection niveau 3</p>
+               <p class="contenuItem" onclick="openModal('vade retro angelusPr')">Vade retro Angelus niveau 2</p>
+               <p class="contenuItem" onclick="openModal('vade retro mordicusPr')">Vade retro Mordicus</p>
+            </div>
+          </div>
+          <div> <!--Prêtre de Nélial-->
+            <h2>Pr&ecirc;tre de N&eacute;lial</h2>
+            <div class="colonne1">
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 1</h3>
+               <p class="contenuItem" onclick="openModal('assistance divinePr')">Assistance divine</p>
+               <p class="contenuItem" onclick="openModal('forcePr')">Force niveau 1</p>
+               <p class="contenuItem" onclick="openModal('guerisonPr')">Gu&eacute;rison niveau 1</p>
+               <p class="contenuItem" onclick="openModal('nuisancePr')">Nuisance niveau 1</p>
+               <p class="contenuItem" onclick="openModal('vitalitePr')">Vitalit&eacute; niveau 1</p>
+
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 2</h3>
+               <p class="contenuItem" onclick="openModal('malediction de leauPr')">Mal&eacute;diction de l&#39;eau </p>
+               <p class="contenuItem" onclick="openModal('malediction des sensPr')">Mal&eacute;diction des sens</p>
+               <p class="contenuItem" onclick="openModal('purification de leau et de la nourriturePr')">Purification de l&#39;eau et de la nourriture</p>
+
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 3</h3>
+               <p class="contenuItem" onclick="openModal('bouclier de la foiPr')">Bouclier de la foi niveau 1</p>
+               <p class="contenuItem" onclick="openModal('nuisancePr')">Nuisance niveau 2</p>
+               <p class="contenuItem" onclick="openModal('repli expeditifPr')">Repli exp&eacute;ditif </p>
+               <p class="contenuItem" onclick="openModal('resurrectionPr')">R&eacute;surrection niveau 1</p>
+
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 4</h3>
+               <p class="contenuItem" onclick="openModal('anarchiePr')">Anarchie niveau 1</p>
+               <p class="contenuItem" onclick="openModal('forcePr')">Force niveau 2</p>
+               <p class="contenuItem" onclick="openModal('guerisonPr')">Gu&eacute;rison niveau 2</p>
+               <p class="contenuItem" onclick="openModal('hesitationPr')">H&eacute;sitation niveau 1</p>
+               <p class="contenuItem" onclick="openModal('muetPr')">Muet</p>
+               <p class="contenuItem" onclick="openModal('mutineriePr')">Mutinerie niveau 1</p>
+               <p class="contenuItem" onclick="openModal('questionneur a repetitionPr')">Questionneur &agrave; r&eacute;p&eacute;tition niveau 1</p>
+               <p class="contenuItem" onclick="openModal('vitalitePr')">Vitalit&eacute; niveau 2</p>
+
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 5</h3>
+               <p class="contenuItem" onclick="openModal('anarchiePr')">Anarchie niveau 2</p>
+               <p class="contenuItem" onclick="openModal('arme magiquePr')">Arme magique niveau 1</p>
+               <p class="contenuItem" onclick="openModal('hesitationPr')">H&eacute;sitation niveau 2</p>
+               <p class="contenuItem" onclick="openModal('mutineriePr')">Mutinerie niveau 2</p>
+               <p class="contenuItem" onclick="openModal('nuisancePr')">Nuisance niveau 3</p>
+               <p class="contenuItem" onclick="openModal('oubliPr')">Oubli niveau 1</p>
+               <p class="contenuItem" onclick="openModal('paralysie de verrePr')">Paralysie de verre</p>
+               <p class="contenuItem" onclick="openModal('questionneur a repetitionPr')">Questionneur &agrave; r&eacute;p&eacute;tition  niveau 2</p>
+            </div>
+            <div class="colonne1">
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 6</h3>
+               <p class="contenuItem" onclick="openModal('apaisement des emotionsPr')">Apaisement des &eacute;motions</p>
+               <p class="contenuItem" onclick="openModal('arret de livressePr')">Arr&ecirc;t de l&#39;ivresse</p>
+               <p class="contenuItem" onclick="openModal('aveuglementPr')">Aveuglement</p>
+               <p class="contenuItem" onclick="openModal('cercle de protectionPr')">Cercle de protection</p>
+               <p class="contenuItem" onclick="openModal('esprit impenetrablePr')">Esprit imp&eacute;n&eacute;trable</p>
+               <p class="contenuItem" onclick="openModal('guerisonPr')">Gu&eacute;rison niveau 3</p>
+               <p class="contenuItem" onclick="openModal('resurrectionPr')">R&eacute;surrection niveau 2</p>
+               <p class="contenuItem" onclick="openModal('neutraliser le poisonPr')">Neutraliser le poison</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 7</h3>
+               <p class="contenuItem" onclick="openModal('bouclier de la foiPr')">Bouclier de la foi niveau 2</p>
+               <p class="contenuItem" onclick="openModal('dissipation du cercle de protectionPr')">Dissipation du cercle de protection</p>
+               <p class="contenuItem" onclick="openModal('nuisancePr')">Nuisance niveau 4</p>
+               <p class="contenuItem" onclick="openModal('oubliPr')">Oubli niveau 2</p>
+               <p class="contenuItem" onclick="openModal('resistance a la peurPr')">R&eacute;sistance &agrave; la peur</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 8</h3>
+               <p class="contenuItem" onclick="openModal('anarchiePr')">Anarchie niveau 3</p>
+               <p class="contenuItem" onclick="openModal('hesitationPr')">H&eacute;sitation niveau 3</p>
+               <p class="contenuItem" onclick="openModal('mutineriePr')">Mutinerie niveau 3</p>
+               <p class="contenuItem" onclick="openModal('questionneur a repetitionPr')">Questionneur &agrave; r&eacute;p&eacute;tition niveau 3</p>
+               <p class="contenuItem" onclick="openModal('renvoi de sortPr')">Renvoi de sort</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 9</h3>
+               <p class="contenuItem" onclick="openModal('oubliPr')">Oubli niveau 3</p>
+               <p class="contenuItem" onclick="openModal('vade retro mordicusPr')">Vade retro mordicus</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 10</h3>
+               <p class="contenuItem" onclick="openModal('immunite contre les sorts et les charmesPr')">Immunit&eacute; contre les sorts et les charmes</p>
+            </div>
+          </div>
+          <div> <!--Prêtre de Saint-Cullt-->
+            <h2>Pr&ecirc;tre de Saint-Cullt</h2>
+            <div class="colonne1">
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 1</h3>
+               <p class="contenuItem" onclick="openModal('assistance divinePr')">Assistance divine </p>
+               <p class="contenuItem" onclick="openModal('detection du mensongePr')">D&eacute;tection du mensonge</p>
+               <p class="contenuItem" onclick="openModal('forcePr')">Force niveau 1</p>
+               <p class="contenuItem" onclick="openModal('guerisonPr')">Gu&eacute;rison niveau 1</p>
+               <p class="contenuItem" onclick="openModal('nuisancePr')">Nuisance niveau 1</p>
+               <p class="contenuItem" onclick="openModal('vitalitePr')">Vitalit&eacute; niveau 1</p>
+
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 2</h3>
+               <p class="contenuItem" onclick="openModal('arme magiquePr')">Arme magique niveau 1</p>
+               <p class="contenuItem" onclick="openModal('blessurePr')">Blessure niveau 1</p>
+               <p class="contenuItem" onclick="openModal('forcePr')">Force niveau 2</p>
+               <p class="contenuItem" onclick="openModal('resistance a la peurPr')">R&eacute;sistance &agrave; la peur</p>
+
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 3</h3>
+               <p class="contenuItem" onclick="openModal('benediction de leauPr')">B&eacute;n&eacute;diction de l&#39;eau</p>
+               <p class="contenuItem" onclick="openModal('nuisancePr')">Nuisance niveau 2</p>
+               <p class="contenuItem" onclick="openModal('resurrectionPr')">R&eacute;surrection niveau 1</p>
+               <p class="contenuItem" onclick="openModal('perception de la santePr')">Perception de la sant&eacute;</p>
+               <p class="contenuItem" onclick="openModal('vitalitePr')">Vitalit&eacute; niveau 2</p>
+
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 4</h3>
+               <p class="contenuItem" onclick="openModal('blessurePr')">Blessure niveau 2</p>
+               <p class="contenuItem" onclick="openModal('bouclier de la foiPr')">Bouclier de la foi niveau 1</p>
+               <p class="contenuItem" onclick="openModal('guerisonPr')">Gu&eacute;rison niveau 2</p>
+               <p class="contenuItem" onclick="openModal('forcePr')">Force niveau 3</p>
+               <p class="contenuItem" onclick="openModal('muetPr')">Muet</p>
+               <p class="contenuItem" onclick="openModal('zone de veritePr')">Zone de v&eacute;rit&eacute;</p>
+
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 5</h3>
+               <p class="contenuItem" onclick="openModal('apaisement des emotionsPr')">Apaisement des &eacute;motions</p>
+               <p class="contenuItem" onclick="openModal('cercle de protectionPr')">Cercle de protection</p>
+               <p class="contenuItem" onclick="openModal('nuisancePr')">Nuisance niveau 3</p>
+               <p class="contenuItem" onclick="openModal('paralysie de verrePr')">Paralysie de verre</p>
+               <p class="contenuItem" onclick="openModal('vitalitePr')">Vitalit&eacute; niveau 3</p>
+            </div>
+            <div class="colonne1">
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 6</h3>
+               <p class="contenuItem" onclick="openModal('bouclier de la foiPr')">Bouclier de la foi niveau 2</p>
+               <p class="contenuItem" onclick="openModal('delivrance de la paralysiePr')">D&eacute;livrance de la paralysie</p>
+               <p class="contenuItem" onclick="openModal('dissipation du cercle de protectionPr')">Dissipation du cercle de protection</p>
+               <p class="contenuItem" onclick="openModal('forcePr')">Force niveau 4</p>
+               <p class="contenuItem" onclick="openModal('nuisancePr')">Nuisance niveau 4</p>
+               <p class="contenuItem" onclick="openModal('resurrectionPr')">R&eacute;surrection niveau 2</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 7</h3>
+               <p class="contenuItem" onclick="openModal('arme magiquePr')">Arme magique niveau 2</p>
+               <p class="contenuItem" onclick="openModal('blessurePr')">Blessure niveau 3</p>
+               <p class="contenuItem" onclick="openModal('esprit impenetrablePr')">Esprit imp&eacute;n&eacute;trable</p>
+               <p class="contenuItem" onclick="openModal('vitalitePr')">Vitalit&eacute; niveau 4</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 8</h3>
+               <p class="contenuItem" onclick="openModal('cercle de douleurPr')">Cercle de douleur</p>
+               <p class="contenuItem" onclick="openModal('guerisonPr')">Gu&eacute;rison niveau 3</p>
+               <p class="contenuItem" onclick="openModal('vade retro satanasPr')">Vade retro satanas niveau 1</p>
+               <p class="contenuItem" onclick="openModal('vitalitePr')">Vitalit&eacute; niveau 5</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 9</h3>
+               <p class="contenuItem" onclick="openModal('renvoi de sortPr')">Renvoi de sort</p>
+               <p class="contenuItem" onclick="openModal('vade retro mordicusPr')">Vade retro mordicus</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 10</h3>
+               <p class="contenuItem" onclick="openModal('retributionPr')">R&eacute;tribution</p>
+            </div>
+          </div>
+          <div> <!--Prêtre de Tsédèq-->
+            <h2>Pr&ecirc;tre de Ts&eacute;d&egrave;q</h2>
+            <div class="colonne1">
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 1</h3>
+               <p class="contenuItem" onclick="openModal('assistance divinePr')">Assistance divine</p>
+               <p class="contenuItem" onclick="openModal('arme magiquePr')">Arme magique niveau 1</p>
+               <p class="contenuItem" onclick="openModal('forcePr')">Force niveau 1</p>
+               <p class="contenuItem" onclick="openModal('guerisonPr')">Gu&eacute;rison niveau 1</p>
+               <p class="contenuItem" onclick="openModal('nuisancePr')">Nuisance niveau 1</p>
+               <p class="contenuItem" onclick="openModal('vitalitePr')">Vitalit&eacute; niveau 1 </p>
+
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 2</h3>
+               <p class="contenuItem" onclick="openModal('benediction de leauPr')">B&eacute;n&eacute;diction de l&#39;eau</p>
+               <p class="contenuItem" onclick="openModal('bouclier de la foiPr')">Bouclier de la foi niveau 1</p>
+               <p class="contenuItem" onclick="openModal('detection du mensongePr')">D&eacute;tection du mensonge</p>
+               <p class="contenuItem" onclick="openModal('forcePr')">Force niveau 2</p>
+               <p class="contenuItem" onclick="openModal('vitalitePr')">Vitalit&eacute; niveau 2</p>
+
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 3</h3>
+               <p class="contenuItem" onclick="openModal('blessurePr')">Blessure niveau 1</p>
+               <p class="contenuItem" onclick="openModal('guerisonPr')">Gu&eacute;rison niveau 2</p>
+               <p class="contenuItem" onclick="openModal('nuisancePr')">Nuisance niveau 2</p>
+               <p class="contenuItem" onclick="openModal('perception de la santePr')">Perception de la sant&eacute;</p>
+               <p class="contenuItem" onclick="openModal('resistance a la peurPr')">R&eacute;sistance &agrave; la peur</p>
+
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 4</h3>
+               <p class="contenuItem" onclick="openModal('arme magiquePr')">Arme magique niveau 2</p>
+               <p class="contenuItem" onclick="openModal('forcePr')">Force niveau 3</p>
+               <p class="contenuItem" onclick="openModal('neutraliser le poisonPr')">Neutraliser le poison </p>
+               <p class="contenuItem" onclick="openModal('resurrectionPr')">R&eacute;surrection niveau 1</p>
+               <p class="contenuItem" onclick="openModal('vitalitePr')">Vitalit&eacute; niveau 3</p>
+
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 5</h3>
+               <p class="contenuItem" onclick="openModal('bouclier de la foiPr')">Bouclier de la foi niveau 2</p>
+               <p class="contenuItem" onclick="openModal('cercle de protectionPr')">Cercle de protection</p>
+               <p class="contenuItem" onclick="openModal('guerisonPr')">Gu&eacute;rison niveau 3</p>
+               <p class="contenuItem" onclick="openModal('paralysie de verrePr')">Paralysie de verre</p>
+            </div>
+            <div class="colonne1">
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 6</h3>
+               <p class="contenuItem" onclick="openModal('dissipation du cercle de protectionPr')">Dissipation du cercle de protection</p>
+               <p class="contenuItem" onclick="openModal('forcePr')">Force niveau 4</p>
+               <p class="contenuItem" onclick="openModal('nuisancePr')">Nuisance niveau 3</p>
+               <p class="contenuItem" onclick="openModal('resurrectionPr')">R&eacute;surrection niveau 2</p>
+               <p class="contenuItem" onclick="openModal('vitalitePr')">Vitalit&eacute; niveau 4</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 7</h3>
+               <p class="contenuItem" onclick="openModal('apaisement des emotionsPr')">Apaisement des &eacute;motions</p>
+               <p class="contenuItem" onclick="openModal('blessurePr')">Blessure niveau 2</p>
+               <p class="contenuItem" onclick="openModal('esprit impenetrablePr')">Esprit imp&eacute;n&eacute;trable</p>
+               <p class="contenuItem" onclick="openModal('martyrPr')">Martyr</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 8</h3>
+               <p class="contenuItem" onclick="openModal('delivrance de la paralysiePr')">D&eacute;livrance de la paralysie</p>
+               <p class="contenuItem" onclick="openModal('resurrectionPr')">R&eacute;surrection niveau 3</p>
+               <p class="contenuItem" onclick="openModal('symbole de tsedeqPr')">Symbole de Ts&eacute;d&egrave;q</p>
+               <p class="contenuItem" onclick="openModal('vitalitePr')">Vitalit&eacute; niveau 5</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 9</h3>
+               <p class="contenuItem" onclick="openModal('vade retro mordicusPr')">Vade retro mordicus</p>
+               <p class="contenuItem" onclick="openModal('zone de veritePr')">Zone de v&eacute;rit&eacute;</p>
+            
+               <h3 style="padding-bottom: 0;margin-bottom:0;" class="contenuItem">Niveau 10</h3>
+               <p class="contenuItem" onclick="openModal('immunite contre les sorts et les charmesPr')">Immunit&eacute; contre les sorts et les charmes</p>
+            </div>
           </div>
    </div>
    <script>
@@ -902,22 +1367,23 @@
          ["esprit impenetrableD", ["Esprit imp&eacute;n&eacute;trable", "<b><u>Description des effets :</u></b> Pendant une heure, il sera impossible &agrave; la cible de flancher sous la torture, sous les charmes, manipulations d&#39;esprit, la possession et autres sorts du genre.<br><b><u>P.S. :</u></b> allez-y avec la logique<br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b><br>Toucher la cible.<br>Dire l&#39;incantation<br>Incantation : Mon ami le feu … accorde &agrave; celui que je touche une impressionnante force d&#39;esprit.<br><b><u>Port&eacute;e :</u></b> toucher<br><b><u>Dur&eacute;e :</u></b> une heure<br><b><u>Type :</u></b> sort<br>Contr&eacute;e par : contre sort universel<br>"]],
          ["peau dalgueD", ["Peau d&#39;algue", "<b><u>Description des effets :</u></b> La cible b&eacute;n&eacute;ficie de 3 points d&#39;armure ainsi que anti poison et anti paralysie.<br><b><u>P.S. :</u></b> M&ecirc;me si la cible a perdu ses points d&#39;armures elle conservera et l&#39;anti poison et l&#39;anti-paralysie pour la dur&eacute;e totale du sort.<br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b><br>1- Toucher la cible.<br>2- Dire l&#39;incantation.<br>3- Asperger un peu d&#39;eau sur la main qui touche la cible.<br>Incantation : Que l&#39;eau ... rende sa peau, plus r&eacute;sistante, sans possibilit&eacute; de la figer et sans qu&#39;aucun poison n&#39;ait raison d&#39;elle, peau d&#39;algue il aura.<br><b><u>Port&eacute;e :</u></b> Toucher<br><b><u>Dur&eacute;e :</u></b> 1 heure<br><b><u>Type :</u></b> physique<br>"]],
          ["peau decorceD", ["Peau d&#39;&eacute;corce", "<b><u>Description des effets :</u></b><br>Niveau 1 : La cible b&eacute;n&eacute;ficie de 1 points d&#39;armure.<br>Niveau 2 : La cible b&eacute;n&eacute;ficie de 2 points d&#39;armure ainsi qu&#39;anti-paralysie (pour un coup seulement)<br><b><u>P.S. :</u></b> pour le Niveau 2, s&#39;il y a une attaque de paralysie le sort s&#39;annule automatiquement, donc l&#39;armure magique se dissipe.<br><b><u>Le jeteur de sort doit :</u></b> toucher la cible.<br>Dire l&#39;incantation.<br>Incantation : Que la terre … &eacute;paississe sa peau, plus rigide elle sera, peau d&#39;&eacute;corce il aura.<br><b><u>Port&eacute;e :</u></b> Toucher<br><b><u>Dur&eacute;e :</u></b> 1 heure<br><b><u>Type :</u></b> physique<br>"]],
+         ["vade retro mordicusD", ["Vade retro mordicus", "<b><u>Description des effets :</u></b> le druide qui invoque ce pouvoir est en mesure de repousser temporairement une cr&eacute;ature mort-vivante. Attention, il se pourrait que certains mort-vivants d&eacute;veloppent une r&eacute;sistance &agrave; l&#39;&eacute;nergie sp&eacute;cifique du druide &agrave; force de s&#39;en servir.<br>Niveau 1 : Le mort-vivant fuit pour 1 minute.<br><b><u>P.S. :</u></b><br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b> prendre une poign&eacute; de feuille vivante et la jeter sur la cible apr&egrave;s avoir dit son incantation.<br>Incantation : Que la puissance du feu … d&eacute;clenche la terreur contre ce mort-vivant.<br><b><u>Port&eacute;e :</u></b> maximum 7 m&egrave;tres (21 pieds)<br><b><u>Dur&eacute;e :</u></b> 1 minute<br><b><u>Type :</u></b> Frayeur<br>Contr&eacute;e par : cercle de protection, renvoi de sort<br>"]],
          ["membre possedeD", ["Membre poss&eacute;d&eacute;", "<b><u>Description des effets :</u></b> Le membre (bras seulement) affecter par ce sort devient tr&egrave;s agressif. S&#39;il n&#39;y a personne autour il sera agressif envers son propri&eacute;taire.<br>Niveau 1 : 5 minutes, 5 pv<br>Niveau 2 : 15 minutes, 10 pv<br>Niveau 3 : 30 minutes, 15 pv<br><b><u>P.S. 1 :</u></b> Le bras redevient normal apr&egrave;s la dur&eacute;e indiqu&eacute;e ou apr&egrave;s que les points de vie du membre poss&eacute;d&eacute; soit diminu&eacute; &agrave; 0. Bref, le premier des 2 rencontr&eacute; mettra fin &agrave; la possession.<br><b><u>P.S. 2 :</u></b> Il faut frapper le membre poss&eacute;d&eacute; pour qu&#39;il perde les points de vie de la possession. Ce n&#39;est pas des points de vie attribu&eacute; &agrave; tout le corps.<br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b><br>1- Verser de l&#39;eau dans sa main<br>2- Dire l&#39;incantation<br>3- Lancer l&#39;eau sur la cible (si l&#39;eau ne touche pas la cible le sort ne fonctionnera pas)<br>Incantation : Je demande &agrave; cette eau de prendre possession du bras de celui-ci au point qu&#39;il devienne incontrôlable.<br><b><u>Port&eacute;e :</u></b> Les gouttes doivent toucher la cible pour fonctionner.<br><b><u>Dur&eacute;e :</u></b> Selon le niveau<br><b><u>Type :</u></b> physique<br>"]],
          ["main brulanteD", ["Main br&ucirc;lante", "<b><u>Description des effets :</u></b> Niveau 1 : La main du druide qui invoque ce pouvoir fait 2 points de d&eacute;g&acirc;ts physiques de feu au toucher corporel. Le personnage qui se retrouve en contact avec cette main enchant&eacute;e subit les d&eacute;g&acirc;ts ainsi qu&#39;une effroyable douleur.<br>Niveau 2 : 4 de d&eacute;g&acirc;t et la douleur persistera tant et aussi longtemps que la cible ne fera pas de compresse d&#39;eau sur la br&ucirc;lure pendant 10 minutes ou 1 minute si eau B&eacute;nite.<br><b><u>P.S. :</u></b> Ce pouvoir peut &ecirc;tre utilis&eacute; en combat. Ce ne sont pas des dommages directs, l&#39;armure fonctionne face &agrave; ces dommages.<br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b><br>1- Ouvrir sa main<br>2- Dire l&#39;incantation dans le creux de sa main<br>3- Fermer le poing<br>4- Toucher la cible disant main br&ucirc;lante, ensuite pr&eacute;ciser les effets. (si ouvre la main avant le bon moment le sort sera perdu)<br>Incantation : Que la flamme douloureuse du feu, donne &agrave; ma main le pouvoir de donner une bonne br&ucirc;lure &agrave; mon ennemi.<br><b><u>Port&eacute;e :</u></b> toucher<br><b><u>Dur&eacute;e :</u></b> maximum 15 minutes avant utilisation<br><b><u>Type :</u></b> physique<br>Contr&eacute;e par : anti-br&ucirc;lure (Pr&ecirc;tre), protection contre le feu(Comp&eacute;tence)<br>"]],
          ["herbe a puceD", ["Herbe &agrave; puce", "<b><u>Description des effets :</u></b> La cible est prise d&#39;une importante crise de d&eacute;mangeaison.<br>Niveau 1 : 2 minutes<br>Niveau 2 : 5 minutes et -1 PV<br>Niveau 3 : 10 minutes et - 3 PV<br><b><u>P.S. :</u></b> La d&eacute;mangeaison est telle que la cible ne peut s&#39;emp&ecirc;cher de se gratter.<br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b><br>1- Se gratter les cheveux 10 secondes<br>2- Prendre une poign&eacute; de feuille morte<br>3- Dire l&#39;incantation<br>4- Toucher la cible avec la main pleine de feuilles mortes<br>Incantation : Toi la terre, que cette poign&eacute;e donne la gratouille &agrave; celui que je vais toucher.<br><b><u>Port&eacute;e :</u></b> Toucher<br><b><u>Dur&eacute;e :</u></b> Selon le niveau<br><b><u>Type :</u></b> physique<br>Contr&eacute;e par : cure, contre sort type physique<br>"]],
          ["anti-paralysieD", ["Anti-Paralysie", "<b><u>Description des effets :</u></b> Permet d&#39;&ecirc;tre prot&eacute;g&eacute; contre les effets paralysant.<br>Niveau 1 : 15 minutes<br>Niveau 2 : 1 heure<br>Niveau 3 : 1 demi-journ&eacute;e<br><b><u>P.S. :</u></b><br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b> Toucher la cible et dire l&#39;incantation.<br>Porter de la cendre sur lui pour faire ce sort.<br>Incantation : Que la chaleur du feu t&#39;habite consumant toutes possibilit&eacute; de paralyser cette personne.<br><b><u>Port&eacute;e :</u></b> Toucher<br><b><u>Dur&eacute;e :</u></b> selon le niveau<br>"]],
-         ["aveuglementD", ["Aveuglement", "<b><u>Description des effets :</u></b> rend la cible aveugle.<br><b><u>P.S. :</u></b><br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b> Dire (Aveuglement) en m&ecirc;me temps qu&#39;il touche la cible.<br>Une fois l&#39;incantation donn&eacute;e, le druide doit garder le poing ferm&eacute; jusqu&#39;&agrave; ce qu&#39;il touche la cible, avec la m&ecirc;me main. Il aura un maximum de 1 minute pour toucher sa cible.<br>Dire la formule d&#39;incantation.<br>Incantation : Mon ami l&#39;eau … enl&egrave;ve la vue &agrave; celui que je vais toucher … Aveuglement&excl;<br><b><u>Port&eacute;e :</u></b> toucher<br><b><u>Dur&eacute;e :</u></b> 30 secondes<br>Contr&eacute;e par : sens fortifi&eacute;s, yeux imperturbable<br>"]],
+         ["aveuglementD", ["Aveuglement", "<b><u>Description des effets :</u></b> rend la cible aveugle.<br><b><u>P.S. :</u></b><br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b> Dire (Aveuglement) en m&ecirc;me temps qu&#39;il touche la cible.<br>Une fois l&#39;incantation donn&eacute;e, le druide doit garder le poing ferm&eacute; jusqu&#39;&agrave; ce qu&#39;il touche la cible, avec la m&ecirc;me main. Il aura un maximum de 1 minute pour toucher sa cible.<br>Dire la formule d&#39;incantation.<br>Incantation : Mon ami l&#39;eau … enl&egrave;ve la vue &agrave; celui que je vais toucher … Aveuglement!<br><b><u>Port&eacute;e :</u></b> toucher<br><b><u>Dur&eacute;e :</u></b> 30 secondes<br>Contr&eacute;e par : sens fortifi&eacute;s, yeux imperturbable<br>"]],
          ["**aura sauvageD", ["** Aura sauvage", "<b><u>Description des effets :</u></b> permet au druide de donner &agrave; son familier un bonus de 2 points de vie magiques pour le prochain combat.<br><b><u>P.S. :</u></b><br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b> s&#39;agenouiller devant son familier, le touch&eacute; d&#39;une main et avoir l&#39;autre main ouverte vers le ciel.<br>Dire la formule d&#39;incantation.<br>Incantation : Que la puissance du feu t&#39;accorde la force de terrasser nos ennemis.<br><b><u>Port&eacute;e :</u></b><br><b><u>Dur&eacute;e :</u></b> un combat<br><b><u>Type :</u></b> physique<br>"]],
-         ["coup de foudre personnelD", ["Coup de foudre Personnel", "<b><u>Description des effets :</u></b> La cible sera prise d&#39;un fort d&eacute;sir de passer beaucoup de temps avec la prochaine personne qu&#39;elle rencontrera. Bref elle devient une sorte de glue, pot de colle ou genre de chien de poche.<br><b><u>P.S. 1 :</u></b> L&#39;effet est seulement rôle-play.<br><b><u>P.S. 2 :</u></b> Celui qui jette ce sort ne peut pas &ecirc;tre la cible de la personne affect&eacute;e par ce sort.<br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b><br>1- Prendre une grande respiration en regardant le ciel<br>2- Expirer la totalit&eacute; de son air dans ses mains<br>3- Dire l&#39;incantation<br>4- Prendre une 2&egrave;me respiration et la souffler &agrave; nouveau dans ses mains<br>5- Pointer la cible en disant Coup de foudre personnel ensuite dire les effets<br>Incantation : Que le vent frappe d&#39;un coup de foudre cette personne le rendant d&eacute;bordant de d&eacute;sir pour la prochaine personne qu&#39;elle verra … Coup de foudre personnel &excl;<br><b><u>Port&eacute;e :</u></b> 1 m&egrave;tre<br><b><u>Dur&eacute;e :</u></b> 30 minutes<br><b><u>Type :</u></b> manipulation de l&#39;esprit et psychique<br>"]],
+         ["coup de foudre personnelD", ["Coup de foudre Personnel", "<b><u>Description des effets :</u></b> La cible sera prise d&#39;un fort d&eacute;sir de passer beaucoup de temps avec la prochaine personne qu&#39;elle rencontrera. Bref elle devient une sorte de glue, pot de colle ou genre de chien de poche.<br><b><u>P.S. 1 :</u></b> L&#39;effet est seulement rôle-play.<br><b><u>P.S. 2 :</u></b> Celui qui jette ce sort ne peut pas &ecirc;tre la cible de la personne affect&eacute;e par ce sort.<br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b><br>1- Prendre une grande respiration en regardant le ciel<br>2- Expirer la totalit&eacute; de son air dans ses mains<br>3- Dire l&#39;incantation<br>4- Prendre une 2&egrave;me respiration et la souffler &agrave; nouveau dans ses mains<br>5- Pointer la cible en disant Coup de foudre personnel ensuite dire les effets<br>Incantation : Que le vent frappe d&#39;un coup de foudre cette personne le rendant d&eacute;bordant de d&eacute;sir pour la prochaine personne qu&#39;elle verra … Coup de foudre personnel !<br><b><u>Port&eacute;e :</u></b> 1 m&egrave;tre<br><b><u>Dur&eacute;e :</u></b> 30 minutes<br><b><u>Type :</u></b> manipulation de l&#39;esprit et psychique<br>"]],
          ["camouflage naturelD", ["Camouflage naturel", "<b><u>Description des effets :</u></b> Ce sort permet seulement au jeteur de sort de se camoufler en certains &eacute;l&eacute;ments de la nature tels qu&#39;en roche, en arbre ou en un animal du choix du druide.<br>N.B. : Quand on dit obligatoire, c&#39;est que vous &ecirc;tes oblig&eacute; de jouer votre camouflage toute la dur&eacute;e du sort.<br>Mineur :Le druide est camoufl&eacute; durant 2 minutes obligatoires.<br>Normal : 5 minutes obligatoires<br>Majeur : 10 minutes obligatoires<br>Sup&eacute;rieur : 15 minutes maximum non obligatoires<br>&Eacute;lite : 30 minutes maximum non obligatoires<br>Ultime : 1 heure maximum non obligatoire<br><b><u>P.S. :</u></b> Il est &agrave; pr&eacute;ciser que ce sort ne va pas &agrave; l&#39;encontre de la logique, c&#39;est-&agrave;-dire que si un druide se fait voir pendant sa transformation, il va sans dire que la ou les personnes qui l&#39;ont vu se transformer savent que l&#39;&eacute;l&eacute;ment ou l&#39;animal en question est en fait le druide.<br>Quelque transformation que ce soit ne change ni les r&eacute;sistances, ni les points de vie. Seuls les animaux peuvent se d&eacute;placer pendant la transformation.<br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b> Se placer debout, les deux pieds de la largeur des &eacute;paules.<br>Lever les deux bras vers le ciel.<br>Prononcer la formule d&#39;incantation.<br>Incantation : Que la terre m&#39;aide &agrave; me cacher des yeux mal tourn&eacute;s en me donnant le visage de (nom de la chose en laquelle il d&eacute;sire se transformer) pour la dur&eacute;e du niveau (nom du niveau).<br><b><u>Port&eacute;e :</u></b> direct<br><b><u>Dur&eacute;e :</u></b> Le temps indiqu&eacute; ci-haut<br>Contr&eacute;e par : Onde anti-magie, transe du sang (chaman)<br>"]],
-         ["detection du mensongeD", ["D&eacute;tection du mensonge", "<b><u>Description des effets :</u></b> ce pouvoir est invoqu&eacute; pour la dur&eacute;e d&#39;une conversation entre deux personnages. La cible doit agir comme &agrave; son naturel mis &agrave; par le fait qu&#39;elle doit se frotter l&#39;oreille &agrave; chacun de ses mensonges.<br><b><u>P.S. :</u></b> ce sort met &agrave; l&#39;&eacute;preuve l&#39;honn&ecirc;tet&eacute; des joueurs. S.V.P. ne trichez pas&excl;<br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b> dire l&#39;incantation.<br>Incantation : Que le vent me donne la clairvoyance de sentir ceux qui tentent de me berner.<br><b><u>Port&eacute;e :</u></b> maximum 3 m&egrave;tres (9 pieds)<br><b><u>Dur&eacute;e :</u></b> maximum 10 minutes<br>Contr&eacute;e par : amn&eacute;sie chronique, muet, contre sort universel<br>"]],
+         ["detection du mensongeD", ["D&eacute;tection du mensonge", "<b><u>Description des effets :</u></b> ce pouvoir est invoqu&eacute; pour la dur&eacute;e d&#39;une conversation entre deux personnages. La cible doit agir comme &agrave; son naturel mis &agrave; par le fait qu&#39;elle doit se frotter l&#39;oreille &agrave; chacun de ses mensonges.<br><b><u>P.S. :</u></b> ce sort met &agrave; l&#39;&eacute;preuve l&#39;honn&ecirc;tet&eacute; des joueurs. S.V.P. ne trichez pas!<br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b> dire l&#39;incantation.<br>Incantation : Que le vent me donne la clairvoyance de sentir ceux qui tentent de me berner.<br><b><u>Port&eacute;e :</u></b> maximum 3 m&egrave;tres (9 pieds)<br><b><u>Dur&eacute;e :</u></b> maximum 10 minutes<br>Contr&eacute;e par : amn&eacute;sie chronique, muet, contre sort universel<br>"]],
          ["anti-charmeD", ["Anti-charme", "<b><u>Description des effets :</u></b> Permet d&#39;&ecirc;tre immunis&eacute; contre les charmes<br>Niveau 1 : 1 heure<br>Niveau 2 : 3 heures<br>Niveau 3 : 1 journ&eacute;e<br><b><u>P.S. :</u></b> Si un charmeur tente de charmer celui qui b&eacute;n&eacute;ficie des effets de ce sort, il devra prendre une grande respiration et souffler la totalit&eacute; de son air en direction du charmeur pour que l&#39;&eacute;l&eacute;ment anti-charme fonctionne.<br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b> Porter de la cendre sur lui pour faire ce sort.<br>Toucher la cible et dire l&#39;incantation.<br>Incantation : Que le vent repousse toute tentative de te charmer<br><b><u>Port&eacute;e :</u></b> Toucher<br><b><u>Dur&eacute;e :</u></b> selon le niveau<br>"]],
          ["crise dhemorroideD", ["Crise d&#39;h&eacute;morro&iuml;de", "<b><u>Description des effets :</u></b> La cible a le fessier qui br&ucirc;le au point qu&#39;elle ne peut courir et se d&eacute;placer est tr&egrave;s douloureux.<br><b><u>P.S. :</u></b> La cible ne peut s&#39;assoir.<br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b><br>1- Se gratter les aisselles 15 secondes<br>2- Dire la formule et toucher la cible<br>Incantation : Que le feu vienne infecter celui-ci par une bonne crise d&#39;h&eacute;morro&iuml;de.<br><b><u>Port&eacute;e :</u></b> Touch&eacute;<br><b><u>Dur&eacute;e :</u></b> 15 minutes<br><b><u>Type :</u></b> physique<br>Contr&eacute;e par : anti-br&ucirc;lure (Pr&ecirc;tre), protection contre le feu(Comp&eacute;tence)<br>"]],
          ["langage intelligibleD", ["Langage intelligible", "<b><u>Description des effets :</u></b> Ce sort permet de comprendre le langage d&#39;une cr&eacute;ature qui ne parle pas le commun.<br><b><u>P.S. :</u></b> Le druide et lui seul peut discuter avec la cr&eacute;ature cibl&eacute;e.<br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b> pointer du doigt la cr&eacute;ature vis&eacute;e.<br>Dire l&#39;incantation.<br>Incantation : Que la puissance du vent m&#39;inspire … Toi (mentionne le nom de la cr&eacute;ature si tu la connais) cr&eacute;ature venue d&#39;ailleurs … je souhaite m&#39;entretenir avec toi que nous puissions communiquer dans un langage commun.<br><b><u>Port&eacute;e :</u></b> maximum 10 m&egrave;tres (30 pieds)<br><b><u>Dur&eacute;e :</u></b> 10 minutes ou le temps de la conversation<br>"]],
          ["spasmeD", ["Spasme", "<b><u>Description des effets :</u></b> Les bras vont frapper une personne &agrave; côt&eacute; ou soi-m&ecirc;me 5 fois pour une dur&eacute;e de 15 secondes chaque fois sur 15 minutes.<br><b><u>P.S. :</u></b><br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b><br>1- Mettre de l&#39;eau dans sa main<br>2- Dire l&#39;incantation<br>3- Asperger la cible avec l&#39;eau qui se trouve dans la main (il faut minimum qu&#39;une goutte d&#39;eau touche la cible pour que le sort fonctionne)<br>Incantation : Que cette eau donne de violents spasmes &agrave; celui que cette eau touchera.<br><b><u>Port&eacute;e :</u></b> Les gouttes doivent toucher la cible pour fonctionner.<br><b><u>Dur&eacute;e :</u></b> 15 minutes<br><b><u>Type :</u></b> physique<br>"]],
          ["**miroir de cristalD", ["** Miroir de cristal", "<b><u>Description des effets :</u></b> le druide forme un bouclier de r&eacute;flexion sur son familier qui renvoie le prochain sort port&eacute; sur lui &agrave; l&#39;envoyeur. Il renvoie aussi bien un sort positif que n&eacute;gatif.<br><b><u>P.S. :</u></b> Ce sort doit &ecirc;tre fait &agrave; l&#39;avance et le familier garde toute libert&eacute; de mouvement.<br><b><u>Le jeteur de sort doit :</u></b> Toucher une grosse roche (plus de 1 pied par 1 pied) avec une main et avec l&#39;autre main, toucher son familier et ensuite dire l&#39;incantation.<br>Incantation : Force de la terre … prot&egrave;ge mon familier de tout sort et que celui-ci soit renvoy&eacute; &agrave; son initiateur.<br><b><u>Port&eacute;e :</u></b> toucher<br><b><u>Dur&eacute;e :</u></b> 1 heure<br><b><u>Type :</u></b> physique<br>Contr&eacute;e par : Immunit&eacute; contre les sorts et les charmes uniquement si fait &agrave; l&#39;avance<br>"]],
          ["parasiteD", ["Parasite", "<b><u>Description des effets :</u></b> Fait apparaitre dans la t&ecirc;te de la cible un parasite qui ronge le cerveau.<br>Niveau 1 : Douleur intense au point de se cogner la t&ecirc;te. (effet R-P)<br>Niveau 2 : Douleur intense au point de se cogner la t&ecirc;te. De plus la cible se cogne tellement la t&ecirc;te qu&#39;elle perdra 3 points de vie.<br><b><u>P.S. :</u></b> C&#39;est une sensation que n&#39;est pas r&eacute;elle donc une forme d&#39;hallucination.<br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b><br>1- Mettre de l&#39;eau dans sa main<br>2- Dire l&#39;incantation<br>3- Tirer l&#39;eau de sa main pour qu&#39;elle touche la cible<br>Incantation : Que cette eau donne un parasite qui rongera le cerveau de celui qu&#39;elle touchera.<br><b><u>Port&eacute;e :</u></b> Les gouttes doivent toucher la cible pour fonctionner.<br><b><u>Dur&eacute;e :</u></b> 2 minutes<br><b><u>Type :</u></b> manipulation de l&#39;esprit et psychique<br>"]],
-         ["terreur du dragonD", ["Terreur du dragon", "<b><u>Description des effets :</u></b> La cible hallucine un dragon volant dans les airs cherchant &agrave; la d&eacute;sint&eacute;grer de ses flammes, bref c&#39;est une forme de frayeur.<br><b><u>P.S. :</u></b> La cible n&#39;est pas oblig&eacute; de fuir toute la dur&eacute;e elle peut chercher &agrave; se cacher de la cr&eacute;ature.<br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b> 1- Dire l&#39;incantation<br>2- Faire 2 tours sur place<br>3- Pointer la cible et crier : Terreur du dragon &excl;<br>Incantation : Toi mon ami le feu, fais voir &agrave; cette personne un dragon volant &eacute;tant d&eacute;bordant de flamme.<br><b><u>Port&eacute;e :</u></b> 7 m&egrave;tres<br><b><u>Dur&eacute;e :</u></b> 5 minutes<br><b><u>Type :</u></b> Frayeur<br>"]],
+         ["terreur du dragonD", ["Terreur du dragon", "<b><u>Description des effets :</u></b> La cible hallucine un dragon volant dans les airs cherchant &agrave; la d&eacute;sint&eacute;grer de ses flammes, bref c&#39;est une forme de frayeur.<br><b><u>P.S. :</u></b> La cible n&#39;est pas oblig&eacute; de fuir toute la dur&eacute;e elle peut chercher &agrave; se cacher de la cr&eacute;ature.<br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b> 1- Dire l&#39;incantation<br>2- Faire 2 tours sur place<br>3- Pointer la cible et crier : Terreur du dragon !<br>Incantation : Toi mon ami le feu, fais voir &agrave; cette personne un dragon volant &eacute;tant d&eacute;bordant de flamme.<br><b><u>Port&eacute;e :</u></b> 7 m&egrave;tres<br><b><u>Dur&eacute;e :</u></b> 5 minutes<br><b><u>Type :</u></b> Frayeur<br>"]],
          ["anti-enchevetrementD", ["Anti-enchev&ecirc;trement", "<b><u>Description des effets :</u></b> Permet que les enchev&ecirc;trements n&#39;aient aucun effet sur la cible.<br><b><u>P.S. :</u></b> L&#39;effet est permanent pour la totalit&eacute; de la dur&eacute;e.<br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b> Porter de la cendre sur lui pour faire ce sort.<br>Toucher la cible et dire l&#39;incantation.<br>Incantation : Que le feu consume toute racine qui osera tenter d&#39;avoir du contrôle sur celui-ci.<br><b><u>Port&eacute;e :</u></b> toucher<br><b><u>Dur&eacute;e :</u></b> 1 heure<br>"]],
          ["handicapD", ["Handicap", "<b><u>Description des effets :</u></b> Rend la cible handicap&eacute;e de la parole. Pour ce faire elle devra avoir la langue qui pousse dans la joue pour toute la dur&eacute;e indiqu&eacute; selon le niveau. (ou parler comme si tu avais une patate chaude dans la bouche. Ce d&eacute;tail au choix du jeteur de sort : langue dans la joue ou patate chaude)<br>Niveau 1 : 2 minutes<br>Niveau 2 : 5 minutes<br>Niveau 3 : 15 minutes<br><b><u>P.S. :</u></b> Ce sort n&#39;emp&ecirc;che pas de parler mais il emp&ecirc;che de faire des sorts.<br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b><br>1- Mettre de l&#39;eau dans sa main<br>2- Dire l&#39;incantation<br>3- Lancer sa main vers la personne cibl&eacute;e pour que des gouttes la touche. Ensuite dire les effets.<br>Incantation : Toi mon ami l&#39;eau, bloque la langue de celui-ci.<br><b><u>Port&eacute;e :</u></b> Les gouttes doivent toucher la cible pour fonctionner.<br><b><u>Dur&eacute;e :</u></b> Selon le niveau<br><b><u>Type :</u></b> physique<br>Contr&eacute;e par : cure, contre sort type physique<br>"]],
          ["neutraliser un poisonD", ["Neutraliser un poison", "<b><u>Description des effets :</u></b> Le druide invoquant ce pouvoir est en mesure de neutraliser n&#39;importe quel poison sur lui comme sur un alli&eacute;.<br><b><u>P.S. :</u></b> fonctionne m&ecirc;me si la cible a ing&eacute;r&eacute; un objet ou une substance. Une fois le sort lanc&eacute;, la victime retrouve ses fonctions &agrave; la m&ecirc;me vitesse que sa d&eacute;gradation. Donc, si &ccedil;a fait 2 minutes qu&#39;elle est fi&eacute;vreuse, &ccedil;a lui prendra 2 minutes avant d&#39;&ecirc;tre compl&egrave;tement gu&eacute;rie du poison.<br><b><u>Le jeteur de sort doit :</u></b> Dire l&#39;incantation.<br>Incantation : Force de l&#39;eau … … fais de moi l&#39;antidote au poison qui incommode la vie de celui-ci.<br><b><u>Port&eacute;e :</u></b> Toucher<br><b><u>Dur&eacute;e :</u></b> Instantan&eacute;<br>"]],
@@ -940,11 +1406,11 @@
          ["transfusion sanguineN", ["Transfusion sanguine", "<b><u>Description des effets :</u></b> Permet au jeteur de sort d&#39;extirper jusqu&#39;&agrave; 4 points de vie d&#39;une personne vivante ou d&#39;une source de sang frais et de les redistribuer &agrave; une autre personne vivante ou &agrave; lui-m&ecirc;me s&#39;il est vivant. Tenter un transfert &agrave; un mort-vivant n&#39;a aucun effet.<br><b><u>P.S. :</u></b> les deux personnes concern&eacute;es doivent &ecirc;tre consentantes sinon &ccedil;a ne marche pas.<br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b> toucher avec les deux mains la personne cible, dire l&#39;incantation/pri&egrave;re. Ensuite faire comme s&#39;il tenait une boule de verre en se dirigeant tranquillement vers le receveur et apposer les 2 mains sur le receveur pendant 5 minutes ininterrompues.<br><b><u>Incantation/pri&egrave;re :</u></b> ... de par ton pouvoir, je transf&egrave;re x point(s) de vie de (nom de la personne) &agrave; (nom de la personne) qui en qu&eacute;mande.<br><b><u>Port&eacute;e :</u></b> toucher<br><b><u>Dur&eacute;e :</u></b> environ 6 minutes<br><b><u>Type :</u></b> physique<br>"]],
          ["toucher putrideN", ["Toucher putride", "<b><u>Description des effets :</u></b> Fait vomir la victime (une fois).<br><b><u>P.S. :</u></b><br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b> se cracher dans la main (faire semblant), placer l&#39;autre main par-dessus et dire l&#39;incantation/pri&egrave;re.<br><b><u>Incantation/pri&egrave;re :</u></b> … fait vomir celui qui touchera ce crachat.<br><b><u>Port&eacute;e :</u></b> toucher<br><b><u>Dur&eacute;e :</u></b> instantan&eacute;<br><b><u>Type :</u></b> physique<br>"]],
          ["venin N", ["Venin ", "<b><u>Description des effets :</u></b> La cible subit 1 d&eacute;gat aux 5 minutes avec de fortes douleurs l&#39;obligeant &agrave; pousser un cri &agrave; chaque P.V. perdu.<br><b><u>P.S. :</u></b><br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b><br>1- Se mordre la main (celle qui servira pour le sort) pour se faire saigner (pas pour vrai)<br>2- Dire l&#39;incantation/pri&egrave;re et par la suite essuyer son sang sur la peau de sa victime (pendant un minimum de 30 secondes ininterrompu)<br><b><u>Incantation/pri&egrave;re :</u></b>  ... fait de ce sang le venin qui empoisonnera ma victime.<br><b><u>Port&eacute;e :</u></b>  Toucher<br><b><u>Dur&eacute;e :</u></b>  Jusqu&#39;&agrave; ce que le cible soit soign&eacute;e ou meurt (coma).<br><b><u>Type :</u></b> physique<br>"]],
-         ["frayeurN", ["Frayeur", "<b><u>Description des effets :</u></b> Le personnage cibl&eacute; par ce pouvoir est pris d&#39;une crise de panique incontrôlable. Il crie et fuit dans une direction oppos&eacute;e &agrave; celui qui lui a jet&eacute; ce sort.<br>Niveau mineur : 1 cible pour 1 minute<br>Niveau majeur : 3 cibles ou 1 undead pour 1 minute<br>Niveau sup&eacute;rieur : une cible par niveau du n&eacute;cromantien pour 1 minute<br>Niveau ultime : Frayeur de masse sur les ennemis ou 2 undeads durant 1 minute<br><b><u>P.S. :</u></b><br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b> Projeter de la poussi&egrave;re d&#39;os en direction de la cible.<br><b><u>Incantation/pri&egrave;re :</u></b> ... provoque la frayeur &excl;<br><b><u>Port&eacute;e :</u></b> 7 m&egrave;tres (21 pieds)<br><b><u>Dur&eacute;e :</u></b> 1 minute<br><b><u>Type :</u></b> Frayeur<br><b><u>Contr&eacute; par :</u></b> &ecirc;tre un esprit ou un mort-vivant<br>"]],
-         ["dissipation de cercle de protectionN", ["Dissipation du cercle de protection", "<b><u>Description des effets :</u></b>Le n&eacute;cromancien qui invoque ce pouvoir est en mesure de dissiper les effets d&#39;un cercle de protection l&#39;emp&ecirc;chant d&#39;agir.<br><b><u>P.S. :</u></b><br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b> mettre les deux mains vers la cible.<br><b><u>Incantation/pri&egrave;re :</u></b> ... annule et dissipe ce cercle de protection qui me nuit.<br>... annule et dissipe ce cercle de protection qui me nuit.<br>... annule et dissipe ce cercle de protection qui me nuit.<br><b><u>Port&eacute;e :</u></b> 2 m&egrave;tres (6 pieds)<br><b><u>Dur&eacute;e :</u></b> Instantan&eacute;<br>"]],
-         ["eveil de la gouleN", ["&Eacute;veil de la goule", "<b><u>Description des effets :</u></b> Permet de relever un personnage en goule. Celui-ci poss&egrave;de les m&ecirc;mes statistiques que lorsqu&#39;il &eacute;tait vivant plus les traits de la race undead et doit &ecirc;tre ob&eacute;issante &agrave; son ma&icirctre. La goule ne peut pas communiquer avec des mots clairs et est tr&egrave;s agressive.<br><b><u>P.S. 1 :</u></b> Une seule goule &agrave; la fois.<br><b><u>P.S. 2 :</u></b> Pr&eacute;voir un crayon &agrave; maquillage noir pour faire une veine noire dans le visage du personnage relev&eacute; en goule.<br><b><u>Mode d&#39;emploi :</u></b><br>1- Faire un cercle visible autour de la cible<br>2- Mettre de la poudre d&#39;os dans chaque main de la cible et sur chaque pied<br>3- Faire des traces visibles dans le visage de la cible (undead)<br>4- Dire l&#39;incantation/pri&egrave;re<br><b><u>Incantation/pri&egrave;re :</u></b> … Que la force et la vigueur de cette chose inerte envahisse ce corps. Goule r&eacute;veille toi &excl;<br><b><u>Port&eacute;e :</u></b> 1 m&egrave;tre<br><b><u>Dur&eacute;e :</u></b> 1 heure<br>"]],
+         ["frayeurN", ["Frayeur", "<b><u>Description des effets :</u></b> Le personnage cibl&eacute; par ce pouvoir est pris d&#39;une crise de panique incontrôlable. Il crie et fuit dans une direction oppos&eacute;e &agrave; celui qui lui a jet&eacute; ce sort.<br>Niveau mineur : 1 cible pour 1 minute<br>Niveau majeur : 3 cibles ou 1 undead pour 1 minute<br>Niveau sup&eacute;rieur : une cible par niveau du n&eacute;cromantien pour 1 minute<br>Niveau ultime : Frayeur de masse sur les ennemis ou 2 undeads durant 1 minute<br><b><u>P.S. :</u></b><br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b> Projeter de la poussi&egrave;re d&#39;os en direction de la cible.<br><b><u>Incantation/pri&egrave;re :</u></b> ... provoque la frayeur !!<br><b><u>Port&eacute;e :</u></b> 7 m&egrave;tres (21 pieds)<br><b><u>Dur&eacute;e :</u></b> 1 minute<br><b><u>Type :</u></b> Frayeur<br><b><u>Contr&eacute; par :</u></b> &ecirc;tre un esprit ou un mort-vivant<br>"]],
+         ["dissipation du cercle de protectionN", ["Dissipation du cercle de protection", "<b><u>Description des effets :</u></b>Le n&eacute;cromancien qui invoque ce pouvoir est en mesure de dissiper les effets d&#39;un cercle de protection l&#39;emp&ecirc;chant d&#39;agir.<br><b><u>P.S. :</u></b><br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b> mettre les deux mains vers la cible.<br><b><u>Incantation/pri&egrave;re :</u></b> ... annule et dissipe ce cercle de protection qui me nuit.<br>... annule et dissipe ce cercle de protection qui me nuit.<br>... annule et dissipe ce cercle de protection qui me nuit.<br><b><u>Port&eacute;e :</u></b> 2 m&egrave;tres (6 pieds)<br><b><u>Dur&eacute;e :</u></b> Instantan&eacute;<br>"]],
+         ["eveil de la gouleN", ["&Eacute;veil de la goule", "<b><u>Description des effets :</u></b> Permet de relever un personnage en goule. Celui-ci poss&egrave;de les m&ecirc;mes statistiques que lorsqu&#39;il &eacute;tait vivant plus les traits de la race undead et doit &ecirc;tre ob&eacute;issante &agrave; son ma&icirctre. La goule ne peut pas communiquer avec des mots clairs et est tr&egrave;s agressive.<br><b><u>P.S. 1 :</u></b> Une seule goule &agrave; la fois.<br><b><u>P.S. 2 :</u></b> Pr&eacute;voir un crayon &agrave; maquillage noir pour faire une veine noire dans le visage du personnage relev&eacute; en goule.<br><b><u>Mode d&#39;emploi :</u></b><br>1- Faire un cercle visible autour de la cible<br>2- Mettre de la poudre d&#39;os dans chaque main de la cible et sur chaque pied<br>3- Faire des traces visibles dans le visage de la cible (undead)<br>4- Dire l&#39;incantation/pri&egrave;re<br><b><u>Incantation/pri&egrave;re :</u></b> … Que la force et la vigueur de cette chose inerte envahisse ce corps. Goule r&eacute;veille toi !!!<br><b><u>Port&eacute;e :</u></b> 1 m&egrave;tre<br><b><u>Dur&eacute;e :</u></b> 1 heure<br>"]],
          ["souvenir dune mortN", ["Souvenir d&#39;une mort", "<b><u>Description des effets :</u></b> Le n&eacute;cromancien d&egrave;s qu&#39;il touche le cadavre. À partir de ce moment, il ne peut plus parler mais un autre personnage peut poser des questions au cadavre. Celui-ci r&eacute;pond avec le plus de franchise possible. À la fin de l&#39;intervention le cadavre redevient mort.<br><b><u>P.S. :</u></b><br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b> jeter une poign&eacute;e de poussi&egrave;re d&#39;os sur le cadavre cibl&eacute;, placer les deux mains ouvertes en direction du mort, dire l&#39;incantation/pri&egrave;re, toucher le mort des deux mains ensuite commence la transe.<br><b><u>Incantation/pri&egrave;re :</u></b> ... fait de ton serviteur un portail ouvrant contact avec ce mort.<br><b><u>Dur&eacute;e :</u></b> 10 minutes<br><b><u>Contr&eacute; par :</u></b> un sort type coffrage, un sort type d&eacute;charge et renvoi de sort (paladin)<br>"]],
-         ["creation de source de sangN", ["Cr&eacute;ation de source de sang frais/putride", "<b><u>Description des effets :</u></b> À l&#39;aide d&#39;une baguette de bois d&#39;au moins 30 cm (1 pied), le n&eacute;cromancien cr&eacute;e un objet contenant 4 points de vie / 4 points de mort. Par la suite, cette source pourra &ecirc;tre utilis&eacute;e par un n&eacute;cromancien pour une transfusion sanguine/morbide. Une fois la source &eacute;puis&eacute;e, elle peut &ecirc;tre remplie avec un sort de cr&eacute;ation de source ou avec des sorts de siphons de sang. Une source de sang ne peut contenir qu&#39;un type de sang, le n&eacute;cromancien doit donc l&#39;identifier &agrave; l&#39;aide d&#39;inscriptions.<br><b><u>P.S. :</u></b><br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b> Fabriquer sa baguette de bois de 30 cm, inscrire des inscriptions dessus lui permettant de l&#39;identifier puis r&eacute;citer la formule.<br><b><u>Incantation/pri&egrave;re :</u></b> ...que cet objet devienne un conteneur pouvant recueillir le sang que j&#39;y aurai plac&eacute;.<br><b><u>Port&eacute;e :</u></b> Toucher<br><b><u>Dur&eacute;e :</u></b> Permanent, jusqu&#39;&agrave; &eacute;puisement de la source<br><b><u>Contr&eacute; par :</u></b> Annulation d&#39;enchantement ou de sorts, touch&eacute; anti-magie, onde anti-magie) (les d&eacute;sactives pour la prochaine heure)<br>"]],
+         ["creation de source de sang frais/putrideN", ["Cr&eacute;ation de source de sang frais/putride", "<b><u>Description des effets :</u></b> À l&#39;aide d&#39;une baguette de bois d&#39;au moins 30 cm (1 pied), le n&eacute;cromancien cr&eacute;e un objet contenant 4 points de vie / 4 points de mort. Par la suite, cette source pourra &ecirc;tre utilis&eacute;e par un n&eacute;cromancien pour une transfusion sanguine/morbide. Une fois la source &eacute;puis&eacute;e, elle peut &ecirc;tre remplie avec un sort de cr&eacute;ation de source ou avec des sorts de siphons de sang. Une source de sang ne peut contenir qu&#39;un type de sang, le n&eacute;cromancien doit donc l&#39;identifier &agrave; l&#39;aide d&#39;inscriptions.<br><b><u>P.S. :</u></b><br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b> Fabriquer sa baguette de bois de 30 cm, inscrire des inscriptions dessus lui permettant de l&#39;identifier puis r&eacute;citer la formule.<br><b><u>Incantation/pri&egrave;re :</u></b> ...que cet objet devienne un conteneur pouvant recueillir le sang que j&#39;y aurai plac&eacute;.<br><b><u>Port&eacute;e :</u></b> Toucher<br><b><u>Dur&eacute;e :</u></b> Permanent, jusqu&#39;&agrave; &eacute;puisement de la source<br><b><u>Contr&eacute; par :</u></b> Annulation d&#39;enchantement ou de sorts, touch&eacute; anti-magie, onde anti-magie) (les d&eacute;sactives pour la prochaine heure)<br>"]],
          ["explosion putride (coffrage)N", ["Explosion putride (coffrage)", "<b><u>Description des effets :</u></b> Permet de transformer un serviteur en un pi&egrave;ge explosif. Le ma&icirctre donne la possibilit&eacute; au serviteur de se transformer en bombe putride, infligeant 4 points de d&eacute;g&acirc;t + les victimes vomissent durant 30 secondes. Donc tous ceux qui se trouvent &agrave; une port&eacute;e de 2 m&egrave;tres subiront les effets de la bombe. À l&#39;explosion, le serviteur redevient un cadavre sans possibilit&eacute; de retour en serviteur.<br><b><u>P.S. :</u></b><br><b><u>Mode d&#39;emploi :</u></b><br>1- Toucher un serviteur de la mort<br>2- Dire l&#39;incantation/pri&egrave;re<br><b><u>Incantation/pri&egrave;re :</u></b> … Permet-moi de cacher dans ce corps une bombe putride.<br><b><u>Port&eacute;e :</u></b> 2 m&egrave;tres<br><b><u>Dur&eacute;e :</u></b> 10 minutes max pour faire boom<br>Coffrage est Contr&eacute; par : Onde anti-magie<br>Explosion putride est Contr&eacute; par : aura b&eacute;ni, cercle de protection, pri&egrave;re, Protecteur infaillible<br>"]],
          ["chemin des runesN", ["Chemin des runes", "<b><u>Description des effets :</u></b> Permet de cr&eacute;er des runes de stockage de sort de n&eacute;cromancie pour soi ou pour d&#39;autres. Contiennent un sort (une marque par personne max), pr&eacute; invoqu&eacute; et qui peut &ecirc;tre d&eacute;clench&eacute; au moment de son choix tant que la rune n&#39;a pas &eacute;t&eacute; effac&eacute;e ou utilis&eacute;e.<br>Niveau 1 : Sort 1 et 2<br>Niveau 2 : Sort 3 et 4<br>Niveau 3 : Sort 5 et 6<br>Niveau 4 : Sort 7 et 8<br>Niveau 5 : Sort 9 et 10<br><b><u>Mode d&#39;emploi :</u></b><br>1- Tracer un cercle visible par terre<br>2- Y placer la personne choisie<br>3- Faire le processus du sort choisi<br>4- Toucher la personne<br>5- Dessiner la rune sur le corps (endroit visible obligatoire)<br>Taille de la rune : minimum 1 pouce si sur le visage / Minimum 3 pouce si ailleurs sur le corps<br>6- Dire l&#39;incantation/pri&egrave;re runique (active la rune)<br><b><u>Incantation/pri&egrave;re :</u></b> … Permet &agrave; ton disciple de transf&eacute;rer ce sort dans cette rune.<br><b><u>Port&eacute;e :</u></b> Toucher<br><b><u>Dur&eacute;e :</u></b> La dur&eacute;e du chapitre tant que la rune est bien visible (ou jusqu&#39;&agrave; l&#39;utilisation du sort)<br>Co&ucirc;t : le co&ucirc;t du sort choisi + le co&ucirc;t points de magie de ce sort.<br><b><u>Contr&eacute; par :</u></b> Annulation d&#39;enchantement ou de sorts, touch&eacute; anti-magie, onde anti-magie) (les d&eacute;sactives pour la prochaine heure)<br>"]],
          ["siphon dintelligenceN", ["Siphon d&#39;intelligence", "<b><u>Description des effets :</u></b> Permet d&#39;enlever toute intelligence et toute connexion &agrave; la r&eacute;alit&eacute;. La personne cibl&eacute;e se mettra donc &agrave; errer sans but.<br><b><u>P.S. :</u></b><br><b><u>Mode d&#39;emploi :</u></b><br>1- Toucher la cible<br>2- Dire l&#39;incantation/pri&egrave;re<br><b><u>Incantation/pri&egrave;re :</u></b> …Je commande &agrave; ton esprit de s&#39;exiler de ce corps. <br><b><u>Port&eacute;e :</u></b> Toucher<br><b><u>Dur&eacute;e :</u></b> 5 minutes<br><b><u>Contr&eacute; par :</u></b> sort type manipulation de l&#39;esprit et psychique sauf Annulation d&#39;enchantements et des sorts car uniquement sur soi<br>"]],
@@ -954,7 +1420,7 @@
          ["membre mouN", ["Membre mou", "<b><u>Description des effets :</u></b> Le membre touch&eacute; devient inutilisable pour le combat<br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b> prendre une poign&eacute;e de terre (sable ou poussi&egrave;re), la tenir dans sa main, dire l&#39;incantation/pri&egrave;re, laisser tomber la poign&eacute;e et toucher la victime.<br><b><u>P.S. :</u></b> le jeteur de sort peut garder la poign&eacute;e aussi longtemps qu&#39;il le souhaite mais d&egrave;s qu&#39;il laisse tomber la terre de sa main, il dispose d&#39;une minute pour toucher sa victime.<br><b><u>Incantation/pri&egrave;re :</u></b> ... retire les os qui solidifient le membre du malheureux que je vais toucher<br><b><u>Port&eacute;e :</u></b> toucher<br><b><u>Dur&eacute;e :</u></b> le temps du combat<br><b><u>Type :</u></b> physique<br>"]],
          ["puits de sangN", ["Puits de sang", "<b><u>Description des effets :</u></b> Ce sort cr&eacute;e un puits de sang n&eacute;crotique sur un cadavre. En lan&ccedil;ant le sort sur un cadavre, les mort-vivants &eacute;tant en contact avec pourront se r&eacute;g&eacute;n&eacute;rer de un point de mort aux 30 secondes pour un maximum de points de mort du nombre total du niveau du cadavre.<br><b><u>P.S. 1 :</u></b> Vous ne pouvez demander le niveau du personnage qu&#39;apr&egrave;s avoir lanc&eacute; le sort.<br><b><u>P.S. 2 :</u></b> Une fois les points de mort distribu&eacute;, le sort se termine et le cadavre est vid&eacute; (ne peut &ecirc;tre r&eacute;utilis&eacute; ni relev&eacute; en serviteur)<br><b><u>Mode d&#39;emploi :</u></b><br>1- Jeter une poign&eacute;e de poussi&egrave;re sur le cadavre cibl&eacute;<br>2- Dire l&#39;incantation/pri&egrave;re<br><b><u>Incantation/pri&egrave;re :</u></b> … que la chair et le sang de ce cadavre deviennent &eacute;nergie contagieuse pour les demi-morts qui prendront contact.<br><b><u>Port&eacute;e :</u></b> Toucher<br><b><u>Dur&eacute;e :</u></b> instantan&eacute;<br><b><u>Type :</u></b> sort universel<br>"]],
          ["arme magiqueN", ["Arme magique", "<b><u>Description des effets :</u></b><br>Niveau 1 : L&#39;arme cibl&eacute;e b&eacute;n&eacute;ficie d&#39;un bonus de + 1 de d&eacute;g&acirc;t magique pour toute la dur&eacute;e d&#39;un combat.<br>Niveau 2 : L&#39;arme cibl&eacute;e b&eacute;n&eacute;ficie d&#39;un bonus de + 2 de d&eacute;g&acirc;ts magiques pour toute la dur&eacute;e d&#39;un combat.<br><b><u>P.S. 1 :</u></b> Doit &ecirc;tre invoqu&eacute; au maximum 15 minutes avant le combat sinon le sort se dissipe. Rappelons que les d&eacute;g&acirc;ts physiques ne sont pas cumulatifs avec les d&eacute;g&acirc;ts magiques.<br><b><u>P.S. 2 :</u></b> Ce sort ne peut &ecirc;tre accumul&eacute; avec le sort arme du fl&eacute;au spirituel.<br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b> durant l&#39;incantation/pri&egrave;re, tenir l&#39;arme avec les 2 mains en se concentrant dessus.<br><b><u>Incantation/pri&egrave;re :</u></b> ... fait de moi l&#39;instrument qui donnera puissance &agrave; l&#39;arme que je touche afin de la rendre magique.<br><b><u>Port&eacute;e :</u></b> toucher<br><b><u>Dur&eacute;e :</u></b> pour le temps d&#39;un combat<br><b><u>Type :</u></b> d&eacute;g&acirc;t physique et magique<br><b><u>Contr&eacute; par :</u></b> Annulation d&#39;enchantement et de sort (pr&ecirc;tre), contre universel<br>"]],
-         ["frappe de la momieN", ["Frappe de la momie", "<b><u>Description des effets :</u></b> Permet de lever une momie. La frappe de la momie est une technique de combat injectant un venin dans la cible. Les attaques peuvent &ecirc;tre inflig&eacute;es soit &agrave; main nue, soit avec une dague.<br>Niveau 1 : 2 d&eacute;g&acirc;ts + la cible vomit.<br>Niveau 2 : 4 d&eacute;g&acirc;ts + la cible vomit.<br>Niveau 3 : 4 d&eacute;g&acirc;ts + poison de la momie.<br>Le poison de la momie donne l&#39;impression d&#39;&ecirc;tre dans une temp&ecirc;te de sable, ass&egrave;che la gorge et brouille la vue.<br><b><u>P.S. 1 :</u></b> La momie a 20 PV.<br><b><u>P.S. 2 :</u></b> Apr&egrave;s avoir donn&eacute; son coup la momie redeviens un cadavre.<br><b><u>Mode d&#39;emploi :</u></b><br>1- Toucher un corps<br>2- Dire l&#39;incantation/pri&egrave;re 1<br>3- Bandouiller un bras au corps<br>4- Dire l&#39;incantation/pri&egrave;re 2, en pointant la direction vers laquelle le seigneur noir souhaite que la momie se dirige.<br>Incantation/pri&egrave;re 1 : ... l&egrave;ve cette momie car j&#39;ai un plan pour elle.<br>Incantation/pri&egrave;re 2 : Fonce et attaque le premier que tu croiseras &excl;<br><b><u>Port&eacute;e :</u></b> toucher<br><b><u>Dur&eacute;e :</u></b> 10 minutes<br><b><u>Contr&eacute; par :</u></b> Immunit&eacute; contre les sorts et les charmes et renvoi de sort (paladin)<br>"]],
+         ["frappe de la momieN", ["Frappe de la momie", "<b><u>Description des effets :</u></b> Permet de lever une momie. La frappe de la momie est une technique de combat injectant un venin dans la cible. Les attaques peuvent &ecirc;tre inflig&eacute;es soit &agrave; main nue, soit avec une dague.<br>Niveau 1 : 2 d&eacute;g&acirc;ts + la cible vomit.<br>Niveau 2 : 4 d&eacute;g&acirc;ts + la cible vomit.<br>Niveau 3 : 4 d&eacute;g&acirc;ts + poison de la momie.<br>Le poison de la momie donne l&#39;impression d&#39;&ecirc;tre dans une temp&ecirc;te de sable, ass&egrave;che la gorge et brouille la vue.<br><b><u>P.S. 1 :</u></b> La momie a 20 PV.<br><b><u>P.S. 2 :</u></b> Apr&egrave;s avoir donn&eacute; son coup la momie redeviens un cadavre.<br><b><u>Mode d&#39;emploi :</u></b><br>1- Toucher un corps<br>2- Dire l&#39;incantation/pri&egrave;re 1<br>3- Bandouiller un bras au corps<br>4- Dire l&#39;incantation/pri&egrave;re 2, en pointant la direction vers laquelle le seigneur noir souhaite que la momie se dirige.<br>Incantation/pri&egrave;re 1 : ... l&egrave;ve cette momie car j&#39;ai un plan pour elle.<br>Incantation/pri&egrave;re 2 : Fonce et attaque le premier que tu croiseras !!<br><b><u>Port&eacute;e :</u></b> toucher<br><b><u>Dur&eacute;e :</u></b> 10 minutes<br><b><u>Contr&eacute; par :</u></b> Immunit&eacute; contre les sorts et les charmes et renvoi de sort (paladin)<br>"]],
          ["vade retro angelusN", ["Vade retro Angelus", "<b><u>Description des effets :</u></b> Le n&eacute;cromancien qui invoque ce pouvoir est en mesure de repousser temporairement les cr&eacute;atures ang&eacute;liques. Attention, il se pourrait que certains anges d&eacute;veloppent une r&eacute;sistance &agrave; l&#39;&eacute;nergie sp&eacute;cifique d&#39;un n&eacute;cromancien &agrave; force d&#39;utilisation. Un n&eacute;cromancien r&eacute;ussit &agrave; repousser des anges ou demi-anges de plus bas niveau que lui.<br>Niveau 1 : L&#39;ange fuit pour 1 minute.<br>Niveau 2 : Les anges fuient pour 1 minute (sort de masse).<br><b><u>P.S. :</u></b> Le n&eacute;cromancien doit rester immobile.<br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b> Projeter de la poussi&egrave;re d&#39;os en direction de la cr&eacute;ature ang&eacute;lique.<br><b><u>Incantation/pri&egrave;re :</u></b> ... d&eacute;clenche ta terreur contre les forces ang&eacute;liques.<br><b><u>Port&eacute;e :</u></b> 7 m&egrave;tres (21 pieds)<br><b><u>Dur&eacute;e :</u></b> 1 minute<br>"]],
          ["vade retro mordicusN", ["Vade retro Mordicus", "<b><u>Description des effets :</u></b> Le n&eacute;cromancien qui invoque ce pouvoir est en mesure de repousser temporairement les cr&eacute;atures mort-vivantes. Attention, il se pourrait que certains mort-vivants d&eacute;veloppent une r&eacute;sistance &agrave; l&#39;&eacute;nergie sp&eacute;cifique d&#39;un n&eacute;cromancien &agrave; force d&#39;utilisation. Un n&eacute;cromancien r&eacute;ussit &agrave; repousser des mort-vivants de plus bas niveau que lui.<br>Niveau 1 : Le mort-vivant fuit pour 1 minute.<br><b><u>P.S. :</u></b> Le n&eacute;cromancien doit rester immobile.<br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b> Projeter de la poussi&egrave;re d&#39;os en direction de la cr&eacute;ature mal&eacute;fique.<br><b><u>Incantation/pri&egrave;re :</u></b> ... d&eacute;clenche ta terreur contre les mort-vivants.<br><b><u>Port&eacute;e :</u></b> 7 m&egrave;tres (21 pieds)<br><b><u>Dur&eacute;e :</u></b> 1 minute<br>"]],
          ["renvoi de sort (miroir de sort)N", ["Renvoi de sort (miroir de sort)", "<b><u>Description des effets :</u></b> Le n&eacute;cro forme un bouclier de r&eacute;flexion autour de lui qui renvoie tout sort port&eacute; sur lui &agrave; l&#39;envoyeur. Il prot&egrave;ge aussi bien des sorts positifs que n&eacute;gatifs.<br><b><u>P.S. :</u></b> Ce sort doit &ecirc;tre fait &agrave; l&#39;avance et le n&eacute;cro garde toute libert&eacute; de mouvement.<br><b><u>Mode d&#39;emploi :</u></b><br>1- Mettre de la poudre d&#39;os sur sa t&ecirc;te<br>2- Dire l&#39;incantation/pri&egrave;re<br><b><u>Incantation/pri&egrave;re :</u></b> ... prot&egrave;ge ton disciple de tous les sorts et que ceux-ci soient renvoy&eacute;s &agrave; son initiateur.<br><b><u>Port&eacute;e :</u></b> Toucher<br><b><u>Dur&eacute;e :</u></b> 1 heure<br><b><u>Type :</u></b> sort universel<br>"]],
@@ -969,11 +1435,12 @@
          ["frappe du cadavreN", ["Frappe du cadavre", "<b><u>Description des effets :</u></b><br>Niveau mineur : Le jeteur de sort rel&egrave;ve un cadavre qui ne peut courir (zombie). Le zombie s&#39;empresse de trouver une personne afin de le frapper. Ensuite, le zombie redevient un cadavre. Le zombie donnera 2 de d&eacute;g&acirc;ts qu&#39;il soit arm&eacute; ou non. Le n&eacute;cromancien sera immunis&eacute;. Le Zombie a 20 points de vie et dispose d&#39;un maximum de 10 minutes pour porter son coup. Une fois le temps &eacute;coul&eacute;, il redevient un cadavre sans vie. Le zombie ira dans la direction indiqu&eacute;e par le n&eacute;cromancien.<br>Niveau majeur : la frappe occasionne 4 de d&eacute;g&acirc;ts et fait vomir<br><b><u>P.S. :</u></b> Ce sort ne peut fonctionner qu&#39;une fois par cadavre.<br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b> jeter une poign&eacute;e de poussi&egrave;re d&#39;os sur le cadavre, dire l&#39;incantation/pri&egrave;re et toucher le cadavre.<br><b><u>Incantation/pri&egrave;re :</u></b> ... esprit plein de rage l&egrave;ve toi et frappe mon ennemi.<br><b><u>Port&eacute;e :</u></b> toucher<br><b><u>Dur&eacute;e :</u></b> coup port&eacute; ou 10 min maximum<br><b><u>Contr&eacute; par :</u></b> Immunit&eacute; contre les sorts et les charmes et renvoi de sort (paladin)<br>"]],
          ["mortaliteN", ["Mortalit&eacute;", "<b><u>Description des effets :</u></b> Octroie une aura magique qui augmente l&#39;essence des cr&eacute;atures mort-vivantes (augmente leurs points de mort) ou octroie la puissance de la mort au vivant (donne un &eacute;quivalent en point de vie).<br>Niveau 1 : Donne + 1 point de vie/mort pour le prochain combat.<br>Niveau 2 : Donne + 2 point de vie/mort pour le prochain combat.<br>Niveau 3 : Donne + 3 point de vie/mort pour le prochain combat.<br>Niveau 4 : Donne + 4 point de vie/mort pour le prochain combat.<br>Niveau 5 : Donne + 5 point de vie/mort pour le prochain combat.<br>Niveau 6 : Donne + 1 point de vie/mort magique pour le prochain combat.<br><b><u>P.S. :</u></b><br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b><br><b><u>Incantation/pri&egrave;re :</u></b> ...ajoute d&eacute;sespoir et mortalit&eacute; &agrave; ce damn&eacute;.<br><b><u>Port&eacute;e :</u></b> toucher<br><b><u>Dur&eacute;e :</u></b> Maximum 10 minutes avant le combat<br><b><u>Type :</u></b> sort g&eacute;n&eacute;ral<br>"]],
          ["transfusion morbideN", ["Transfusion morbide", "<b><u>Description des effets :</u></b> Permet au jeteur de sort d&#39;extirper jusqu&#39;&agrave; 4 points de mort d&#39;une personne mort-vivante ou d&#39;une source de sang putride et de les redistribuer &agrave; une autre personne mort-vivante ou &agrave; lui-m&ecirc;me s&#39;il est mort-vivant. Tenter un transfert &agrave; un vivant n&#39;a aucun effet.<br><b><u>P.S. :</u></b> les deux personnes concern&eacute;es doivent &ecirc;tre consentantes sinon &ccedil;a ne marche pas.<br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b> toucher avec les deux mains la personne cible et dire l&#39;incantation/pri&egrave;re. Ensuite faire comme s&#39;il tenait une boule de verre en se dirigeant tranquillement vers le receveur et apposer les 2 mains sur le receveur pendant 5 minutes ininterrompues.<br><b><u>Incantation/pri&egrave;re :</u></b> ... de par ton pouvoir, je transf&egrave;re x point(s) de mort de (nom de la personne) &agrave; (nom de la personne) qui en qu&eacute;mande.<br><b><u>Port&eacute;e :</u></b> toucher<br><b><u>Dur&eacute;e :</u></b> environ 6 minutes<br><b><u>Type :</u></b> physique<br>"]],
+         ["zone putrideN", ["Zone putride", "<b><u>Description des effets :</u></b> Permet de cr&eacute;er une zone d&#39;un diam&egrave;tre de 2 m&egrave;tres où tous ceux qui sont &agrave; l&#39;int&eacute;rieur vomissent pendant 15 secondes<br><b><u>P.S. :</u></b> La dur&eacute;e de la zone est de 5 minutes<br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b> r&eacute;pandre de la poussi&egrave;re d&#39;os autour de lui (l&#39;&eacute;quivalent de 2 poign&eacute;es) et tracer la zone avant de dire l&#39;incantation/pri&egrave;re.<br><b><u>Incantation/pri&egrave;re :</u></b> ... Zone putride !!<br><b><u>Port&eacute;e :</u></b> 2 m&egrave;tres<br><b><u>Dur&eacute;e :</u></b> 5 minutes<br><b><u>Type :</u></b> physique<br>"]],
          ["retour en poussiereN", ["Retour en poussi&egrave;re", "<b><u>Description des effets :</u></b> Permet de transformer en un tas de poussi&egrave;re, temporairement, un mort-vivant pour un temps pr&eacute;cis. Apr&egrave;s il reprend sa forme normale (&eacute;quivaut &agrave; assommer).<br>Niveau mineur : Pour 1 minute<br>Niveau majeur : Pour 5 minutes<br><b><u>P.S. :</u></b> - fonctionne &eacute;galement sur les zombies - Certains mort-vivants puissants ne sont pas affect&eacute;s par ce sort.<br><b><u>Mode d&#39;emploi :</u></b><br>1- Ouvrir une main vers le sol<br>2- Avec l&#39;autre main, tenir le poignet de la main dirig&eacute;e vers le sol<br>3- Dire l&#39;incantation/pri&egrave;re<br>4- Il dispose d&#39;une minute pour toucher la cible avec la main qui &eacute;tait ouverte. <br><b><u>Incantation/pri&egrave;re :</u></b> ... retire pour un instant la vigueur de ce demi-vivant. <br><b><u>Port&eacute;e :</u></b> Toucher<br><b><u>Dur&eacute;e :</u></b> Selon le niveau<br><b><u>Type :</u></b> sort g&eacute;n&eacute;ral<br>"]],
          ["chatiment de mortN", ["Ch&acirc;timent de mort", "<b><u>Description des effets :</u></b> Permet de pouvoir marquer une personne avec une marque noire (crayon de maquillage doit &ecirc;tre sur la peau et non sur une armure).<br>Peut infliger &agrave; la cible +1 d&eacute;g&acirc;t magique sur cette personne.<br>Par la suite la victime devra calculer automatiquement + 1 de d&eacute;g&acirc;t magique &agrave; chaque coup qu&#39;elle subira pour la totalit&eacute; de la dur&eacute;e.<br><b><u>P.S. 1 :</u></b> Cumulable avec les sorts de d&eacute;g&acirc;ts magiques<br><b><u>P.S. 2 :</u></b> Si elle re&ccedil;oit seulement des d&eacute;g&acirc;ts physique la cible perdra des pv magique et physique.<br><b><u>Mode d&#39;emploi :</u></b><br>1- Toucher la cible<br>2- Dire l&#39;incantation/pri&egrave;re<br><b><u>Incantation/pri&egrave;re :</u></b> … Que ton ch&acirc;timent touche cette personne.<br><b><u>Port&eacute;e :</u></b> Toucher<br><b><u>Dur&eacute;e :</u></b> 12 heures<br><b><u>Type :</u></b> physique<br>"]],
          ["canalisation noireN", ["Canalisation noire", "<b><u>Description des effets :</u></b> Permet de canaliser dans son arme un sort de blessure. Au lieu d&#39;utiliser sa main, il peut utiliser son arme pour infliger le sort Blessure de niveau 1 &agrave; 4. Il doit effectuer l&#39;incantation/pri&egrave;re comme s&#39;il voudrait utiliser le sort mais peut ensuite frapper avec son arme et choisir le moment pour d&eacute;clencher son sort de blessure.<br><b><u>P.S. 1 :</u></b> Pour le n&eacute;cromancien uniquement<br><b><u>P.S. 2 :</u></b> Pour une arme ma&icirctris&eacute;e en corps &agrave; corps seulement donc ne fonctionne pas avec des armes de jet, projectile et arme &agrave; projectile.<br><b><u>P.S. 3 :</u></b> Ne peut avoir plus d&#39;une charge par arme.<br><b><u>Mode d&#39;emploi :</u></b><br>1- Faire la proc&eacute;dure pour faire un sort de blessure<br>2- Toucher l&#39;arme<br>3- Dire l&#39;incantation/pri&egrave;re<br>4- Frapper une cible<br><b><u>Incantation/pri&egrave;re :</u></b> … Permet moi de canaliser cette blessure de par cette arme.<br><b><u>Port&eacute;e :</u></b> Toucher<br><b><u>Dur&eacute;e :</u></b> 15 minutes<br>Co&ucirc;t : le co&ucirc;t du sort choisi + le co&ucirc;t points de magie de ce sort.<br><b><u>Type :</u></b> physique<br>"]],
          ["perception des mortsN", ["Perception des morts", "<b><u>Description des effets :</u></b> D&eacute;termine le nombre de morts qui se trouvent sur le champ de bataille.<br><b><u>P.S. :</u></b> Que les undeads soient anim&eacute;s (vivants) ou d&eacute;c&eacute;d&eacute;s, ils sont vus comme morts en tout temps.<br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b><br><b><u>Incantation/pri&egrave;re :</u></b> ... de par ton pouvoir montre moi l&#39;aura de tous les morts sur le champ de bataille.<br><b><u>Port&eacute;e :</u></b> 10 m&egrave;tres (30 pieds)<br><b><u>Dur&eacute;e :</u></b> instantan&eacute;<br><b><u>Contr&eacute; par :</u></b> &ecirc;tre vivant<br>"]],
-         ["douleurN", ["Douleur", "<b><u>Description des effets :</u></b> Ce sort permet d&#39;infliger une douleur atroce &agrave; une cible d&eacute;sign&eacute;e par le seigneur noir. Pour une minute, la cible se tord d&#39;une douleur incroyable. Cependant, si la cible re&ccedil;oit un coup, elle revient en pleine forme.<br><b><u>P.S. :</u></b> Fait une paralysie partiel si fait sur un mort-vivant.<br><b><u>Mode d&#39;emploi :</u></b><br>1- Dire l&#39;invocation<br>2- Toucher la cible<br><b><u>Incantation/pri&egrave;re :</u></b> ... Permet moi de donner un avant-go&ucirc;t de la mort &agrave; qui je vais toucher. Douleur &excl;<br><b><u>Port&eacute;e :</u></b> Toucher<br><b><u>Dur&eacute;e :</u></b> 1 minute<br><b><u>Type :</u></b> physique<br>"]],
+         ["douleurN", ["Douleur", "<b><u>Description des effets :</u></b> Ce sort permet d&#39;infliger une douleur atroce &agrave; une cible d&eacute;sign&eacute;e par le seigneur noir. Pour une minute, la cible se tord d&#39;une douleur incroyable. Cependant, si la cible re&ccedil;oit un coup, elle revient en pleine forme.<br><b><u>P.S. :</u></b> Fait une paralysie partiel si fait sur un mort-vivant.<br><b><u>Mode d&#39;emploi :</u></b><br>1- Dire l&#39;invocation<br>2- Toucher la cible<br><b><u>Incantation/pri&egrave;re :</u></b> ... Permet moi de donner un avant-go&ucirc;t de la mort &agrave; qui je vais toucher. Douleur !!!<br><b><u>Port&eacute;e :</u></b> Toucher<br><b><u>Dur&eacute;e :</u></b> 1 minute<br><b><u>Type :</u></b> physique<br>"]],
 
          
          ["renvoi de sortPa", ["Renvoi de sort", "<b><u>Description des effets :</u></b> Permet de former un bouclier de r&eacute;flexion autour de lui-m&ecirc;me qui renvoie tout sort port&eacute; sur lui &agrave; l&#39;envoyeur. Il prot&egrave;ge aussi bien des sorts positifs que n&eacute;gatifs.<br><b><u>P.S. 1 :</u></b> Cette vertu doit &ecirc;tre faite &agrave; l&#39;avance et le templier garde toute libert&eacute; de mouvement.<br><b><u>P.S. 2 :</u></b> Cette vertu demeure m&ecirc;me apr&egrave;s la mort du templier.<br><b><u>Mode d&#39;emploi :</u></b><br>1- Se placer les deux bras en croix<br>2- Les yeux lev&eacute;s vers le ciel<br>3- Dire la pri&egrave;re<br>Pri&egrave;re : ... prot&egrave;ge ton disciple de tous les sorts et que ceux-ci soient renvoy&eacute;s &agrave; son initiateur.<br><b><u>Port&eacute;e :</u></b> Toucher<br><b><u>Dur&eacute;e :</u></b> 1 heure<br><b><u>Contr&eacute; par :</u></b> Contre universel<br>"]],
@@ -1082,7 +1549,7 @@
          ["symbole de farangPr", ["Symbole de Farang", "<b><u>Description des effets :</u></b> Permet de donner un repli exp&eacute;ditif &agrave; tous ceux qui toucheront le pr&ecirc;tre au moment qu&#39;il lancera le sort. Ceux-ci auront un maximum de temps pour utiliser le sort et ce uniquement au cri du pr&ecirc;tre.<br>Niveau 1 : max 2 minutes pour faire le repli exp&eacute;ditif apr&egrave;s avoir lanc&eacute; le sort mais ne fonctionnera qu&#39;au cri du pr&ecirc;tre (repli exp&eacute;ditif)<br>Niveau 2 : max 5 minutes pour faire le repli exp&eacute;ditif apr&egrave;s avoir lanc&eacute; le sort mais ne fonctionnera qu&#39;au cri du pr&ecirc;tre (repli exp&eacute;ditif)<br><b><u>P.S. 1 :</u></b> Le pr&ecirc;tre doit avoir sur lui le symbole de son dieu pour que le sort fonctionne.<br><b><u>P.S. 2 :</u></b> Ceux qui b&eacute;n&eacute;ficient de ce sort auront 2 secondes pour crier repli exp&eacute;ditif &agrave; leur tour pour activer le sort.<br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b><br>1- Ceux qui veulent b&eacute;n&eacute;ficier du sort touchent le pr&ecirc;tre avec sa main.<br>2- Dire la pri&egrave;re<br>3- Crier : Allier, Repli exp&eacute;ditif &excl; (au moment choisi)<br>Pri&egrave;re : ... Envahi mes alli&eacute;s d&#39;une grande vigueur &agrave; la fuite que je pr&eacute;vois.<br><b><u>Port&eacute;e :</u></b> Toucher<br><b><u>Dur&eacute;e :</u></b> Selon le niveau<br><b><u>Type :</u></b> sort type Physique SAUF cure<br>"]],
          ["groupiePr", ["Groupie", "<b><u>Description des effets :</u></b> La cible approuvera tout ce que le pr&ecirc;tre dit et cherche m&ecirc;me &agrave; exag&eacute;rer des choses en le sens du pr&ecirc;tre. La victime cherchera &agrave; d&eacute;fendre le pr&ecirc;tre s&#39;il est attaqu&eacute; (Rôle-Play) Le pr&ecirc;tre devient l&#39;idole de la cible.<br>Niveau 1 : 5 minutes<br>Niveau 2 : 10 minutes<br>Niveau 3 : 15 minutes<br><b><u>P.S. :</u></b> La cible ne se fera pas tuer pour le pr&ecirc;tre.<br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b><br>1- Se mettre la main sur le cœur<br>2- Dire la pri&egrave;re<br>3- Pointer la cible avec la m&ecirc;me main.<br>Pri&egrave;re : ... Que celui que je vais pointer devienne mon plus grand fan &excl;<br><b><u>Port&eacute;e :</u></b> 1 m&egrave;tre<br><b><u>Dur&eacute;e :</u></b> Selon le niveau<br><b><u>Type :</u></b> Manipulation de l&#39;esprit et psychique<br>"]],
          ["epinesPr", ["&Eacute;pines", "<b><u>Description des effets :</u></b> La peau du pr&ecirc;tre se voit couverte d&#39;&eacute;pines, blessant toute personne la touchant.<br>Niveau 1 : Pour 1 frappe re&ccedil;ue, l&#39;attaquant re&ccedil;oit 1 point de d&eacute;g&acirc;t.<br>Niveau 2 : Pour 1 frappe re&ccedil;ue, l&#39;attaquant re&ccedil;oit 2 points de d&eacute;g&acirc;t.<br>Niveau 3 : Pour 2 frappes re&ccedil;ues, l&#39;attaquant re&ccedil;oit 2 points de d&eacute;g&acirc;t.<br>Niveau 4 : Pour 3 frappes re&ccedil;ues, l&#39;attaquant re&ccedil;oit 2 points de d&eacute;g&acirc;t.<br><b><u>P.S. :</u></b> Au moment du coup port&eacute; dire : &#39;&Eacute;pines&#39; puis le nombre de d&eacute;g&acirc;t.<br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b><br>Serrer les deux poings et r&eacute;citer l&#39;incantation<br>Pri&egrave;re : ...que ma peau devienne une barri&egrave;re douloureuse entre moi et mes ennemis.<br><b><u>Port&eacute;e :</u></b> Sur le pr&ecirc;tre uniquement<br><b><u>Dur&eacute;e :</u></b> 15 minutes ou la dur&eacute;e du combat<br><b><u>Type :</u></b> d&eacute;g&acirc;t physique et d&eacute;g&acirc;t magique<br>"]],
-         ["questionneur a repetition (plaie de questions)Pr", ["Questionneur &agrave; r&eacute;p&eacute;tition (plaie de questions)", "<b><u>Description des effets :</u></b> La personne cibl&eacute;e par ce sort pose sans cesse des questions &agrave; quiconque.<br>Niveau 1 : 5 minutes<br>Niveau 2 : 15 minutes<br>Niveau 3 : 30 minutes<br><b><u>P.S. :</u></b><br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b><br>R&eacute;citer l&#39;incantation puis toucher sa cible.<br>Pri&egrave;re : ...que ma cible devienne un irritant pour tous ceux qui l&#39;entourent.<br><b><u>Port&eacute;e :</u></b> Toucher<br><b><u>Dur&eacute;e :</u></b> Selon le niveau du sort<br><b><u>Type :</u></b> Manipulation de l&#39;esprit et psychique<br>"]],
+         ["questionneur a repetitionPr", ["Questionneur &agrave; r&eacute;p&eacute;tition (plaie de questions)", "<b><u>Description des effets :</u></b> La personne cibl&eacute;e par ce sort pose sans cesse des questions &agrave; quiconque.<br>Niveau 1 : 5 minutes<br>Niveau 2 : 15 minutes<br>Niveau 3 : 30 minutes<br><b><u>P.S. :</u></b><br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b><br>R&eacute;citer l&#39;incantation puis toucher sa cible.<br>Pri&egrave;re : ...que ma cible devienne un irritant pour tous ceux qui l&#39;entourent.<br><b><u>Port&eacute;e :</u></b> Toucher<br><b><u>Dur&eacute;e :</u></b> Selon le niveau du sort<br><b><u>Type :</u></b> Manipulation de l&#39;esprit et psychique<br>"]],
          ["soumissionPr", ["Soumission", "<b><u>Description des effets :</u></b> La cible est dans l&#39;obligation de se prosterner &agrave; la vue de la pr&ecirc;tresse &agrave; chaque fois qu&#39;elle la voit &agrave; l&#39;int&eacute;rieur de la prochaine heure.<br><b><u>P.S. :</u></b><br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b><br>Dire la pri&egrave;re et toucher sa victime (1 minute pour toucher)<br>Pri&egrave;re : ... fait de moi l&#39;embl&egrave;me de ta pr&eacute;sence.<br><b><u>Port&eacute;e :</u></b> toucher<br><b><u>Dur&eacute;e :</u></b> 1 heure<br><b><u>Type :</u></b> Manipulation de l&#39;esprit et psychique<br>"]],
          ["veninPr", ["Venin", "<b><u>Description des effets :</u></b><br>Niveau 1 : La cible perd 1 P.V. aux 5 minutes avec de fortes douleurs l&#39;obligeant &agrave; pousser un cri &agrave; chaque P.V. perdu.<br>Niveau 2 : La cible perd 1 P.V. &agrave; chaque minute avec de fortes douleurs l&#39;obligeant &agrave; pousser un cri &agrave; chaque P.V. perdu.<br><b><u>P.S. :</u></b><br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b><br>1- Se mordre la main (celle qui servira pour le sort) pour se faire saigner (pas pour vrai)<br>2- Dire la pri&egrave;re<br>3- Essuyer son sang sur la peau de sa victime (pendant un minimum de 3 secondes ininterrompu)<br>Pri&egrave;re : ... fait de ce sang le venin qui empoisonnera ma victime.<br><b><u>Port&eacute;e :</u></b> Toucher<br><b><u>Dur&eacute;e :</u></b> jusqu&#39;&agrave; la gu&eacute;rison ou la mort.<br><b><u>Type :</u></b> sort type physique<br>"]],
          ["annulation denchantement ou de sortPr", ["Annulation d&#39;enchantement ou de sort", "<b><u>Description des effets :</u></b> Ce pouvoir annule tous les effets des sorts (sort de pr&ecirc;tre, chaman, druide, n&eacute;cromancien) et des enchantements d&#39;objet magique (pouvoir du chaman) affectant la cible sur laquelle le pr&ecirc;tre se concentre.<br><b><u>P.S. :</u></b> Ne fonctionne pas sur les poisons ou effets paralysants ou n&eacute;gatifs qui ne proviennent pas d&#39;un sort. Ne fonctionne pas non plus sur les charmes des bardes.<br><b><u>Mode d&#39;emploi :</u></b><br><b><u>Le jeteur de sort doit :</u></b><br>Placer les 2 mains face &agrave; la cible durant la pri&egrave;re.<br>Pri&egrave;re : ... de par ta puissance, permet &agrave; ton disciple d&#39;annuler le pouvoir qui ensorcelle mon ami, qu&#39;il reprenne son int&eacute;grit&eacute; une fois purifi&eacute;.<br><b><u>Port&eacute;e :</u></b> 2 m&egrave;tres (6 pieds)<br><b><u>Dur&eacute;e :</u></b> Instantan&eacute;<br>"]],
@@ -1133,6 +1600,11 @@
        window.onclick = function(event) {
          if (event.target == modal) {
            modal.style.display = "none";
+         }
+       }
+       window.onkeydown = function(keyEvent) {
+         if(keyEvent.key == "Escape") {
+            modal.style.display = "none";
          }
        }
    </script>

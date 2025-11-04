@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html style="background-color : #999933;padding:0; margin :0;height: 100%; min-height: 100%;">
+    <head>
+        <title>Cr&eacute;ateur de perso Vers&eacute;bock</title>
+          
+
+        <style>
+            .global {
+                background: url('img/site.jpg');/*http://www.versebock.com/img/site.jpg*/
+                /* cette image ne m'appartient aucunement, elle provient du site de versebock.com, sa propriété lui revient*/
+                background-repeat: no-repeat;
+                background-size: contain;
+                height: 1000px;
+                margin: 0 auto;
+                padding: 0;
+                position: relative;
+                text-align: left;
+                width: 1030px;
+              }
+              .contenu {
+                position: relative;
+                left: 128px;
+                top: 128px;
+                width: 763px;
+                overflow: auto;
+                height: 744px;
+                margin: 0;
+              }
+              .menu {
+                width: 130px;
+                top: 175px;
+                left: -10px;
+                position: absolute;
+                text-align: center;
+                background-color: rgb(255, 255, 255, 0.5);
+              }
+
+
+            .grilleContenu {
+                display: grid;
+                grid-template-areas: 'grilleClasses grilleAlignements grilleRaces';
+                width: 606px;
+                padding-left: 10%;
+                /*padding-top: 10%;*/
+                
+                /*grid-template-columns: ;*/
+            }
+            .grilleClasses {
+                display: grid;
+                grid-area: grilleClasses;
+                grid-template-columns: auto;
+                grid-template-rows: repeat(20, 27px);
+            }
+            .grilleAlignements {
+                display: grid;
+                grid-area: grilleAlignements;
+                grid-template-columns: auto;
+                grid-template-rows: repeat(12, 54px);
+            }
+            .grilleRaces {
+                display: grid;
+                grid-area: grilleRaces;
+                grid-template-columns: auto;
+                grid-template-rows: repeat(12, 54px);
+            }
+
+            .button {
+              background-color:lightgray;
+              transition-duration:0.4s;
+              border-radius:7px;
+              border-style: solid;
+              border-color: black;
+              border-width: 1px;
+              width:200px;
+              height:50px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+              margin: 4px 2px;
+              cursor: pointer;
+            }
+            .button:hover {
+            background-color:#4C4E52;
+            color:white;
+            }
+            .button:focus {
+            background-color:#579CD0;
+            }
+           .buttonClasse {
+            height:25px;
+            display:block;
+           }
+
+           .menuItem {
+            color: #789B51;
+            font-style: italic;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            display: block;
+            margin: 10px;
+           }
+           .menuItem:hover {
+             color: black;
+           }
+
+        </style>
+    </head>
+    <div class="global">
+        <div class="menu">
+          <a class="menuItem" href="accueil.html">Accueil</a>
+          <a class="menuItem">Aide cr&eacute;ateur de personnage</a>
+          <a class="menuItem" href="CarteVersebockComplete.html">Carte compl&egrave;te du monde de Vers&eacute;bock</a>
+          <a class="menuItem" href="GrilleMonteeNiveau.html">Grille de mont&eacute;e de niveau interractive</a>
+          <a class="menuItem" href="MeilleureMagie.html">Meilleure Magie</a>
+         </div>
+            <div class="contenu">
+                <h2 style="text-align: center;">Outil de cr&eacute;ation de personnage: Pr&eacute;sentation des options possibles</h2>
+                <p style="margin: 5px;text-align: center;">Ce site permet de voir plus facilement quelles sont les options disponibles pour chaque classes, alignements et races connues du public</p>
+        <div class="grilleContenu">
+            <div class="grilleClasses">
+                <button id="Barde" type="button" class="button buttonClasse" style="visibility:visible;" onclick="cacherClasses();this.style.visibility='visible';Barde()">Barde</button>
+                <button id="Chaman" type="button" class="button buttonClasse" style="visibility:visible;" onclick="cacherClasses();this.style.visibility='visible';Chaman();">Chaman</button>
+                <button id="Druide" type="button" class="button buttonClasse" style="visibility:visible;" onclick="cacherClasses();this.style.visibility='visible';Druide()">Druide</button>
+                <button id="FauniqueC" type="button" class="button buttonClasse" style="visibility:visible;" onclick="cacherClasses();this.style.visibility='visible';FauniqueC()">Faunique (Classe/Race)</button>
+                <button id="Guerrier" type="button" class="button buttonClasse" style="visibility:visible;" onclick="cacherClasses();this.style.visibility='visible';Guerrier()">Guerrier</button>
+                <button id="HommeDuPeuple" type="button" class="button buttonClasse" style="visibility:visible;" onclick="cacherClasses();this.style.visibility='visible';HommeDuPeuple()">Homme du peuple</button>
+                <button id="Necromancien" type="button" class="button buttonClasse" style="visibility:visible;" onclick="cacherClasses();this.style.visibility='visible';Necromancien()">N&eacute;cromancien</button>
+                <button id="PaladinA" type="button" class="button buttonClasse" style="visibility:visible;" onclick="cacherClasses();this.style.visibility='visible';Paladin();document.getElementById('ln').style.visibility='hidden';">Paladin d&#39;Agathos</button>
+                <button id="PaladinM" type="button" class="button buttonClasse" style="visibility:visible;" onclick="cacherClasses();this.style.visibility='visible';Paladin();document.getElementById('ln').style.visibility='hidden';">Paladin de Ts&eacute;d&egrave;q</button>
+                <button id="PaladinS" type="button" class="button buttonClasse" style="visibility:visible;" onclick="cacherClasses();this.style.visibility='visible';Paladin()">Paladin de Saint-Cullt</button>
+                <button id="PretreAh" type="button" class="button buttonClasse" style="visibility:visible;" onclick="cacherClasses();this.style.visibility='visible';PretreAh()">Pr&#234;tre d&#39;Agathos</button>
+                <button id="PretreAr" type="button" class="button buttonClasse" style="visibility:visible;" onclick="cacherClasses();this.style.visibility='visible';PretreAr()">Pr&#234;tre d&#39;Arachnide</button>
+                <button id="PretreB" type="button" class="button buttonClasse" style="visibility:visible;" onclick="cacherClasses();this.style.visibility='visible';PretreB()">Pr&#234;tre de Brocal</button>
+                <button id="PretreF" type="button" class="button buttonClasse" style="visibility:visible;" onclick="cacherClasses();this.style.visibility='visible';PretreF()">Pr&#234;tre de Farang</button>
+                <button id="PretreG" type="button" class="button buttonClasse" style="visibility:visible;" onclick="cacherClasses();this.style.visibility='visible';PretreG()">Pr&#234;tre de Gaola</button>
+                <button id="PretreMie" type="button" class="button buttonClasse" style="visibility:visible;" onclick="cacherClasses();this.style.visibility='visible';PretreMie()">Pr&#234;tre de Miedal</button>
+                <button id="PretreMit" type="button" class="button buttonClasse" style="visibility:visible;" onclick="cacherClasses();this.style.visibility='visible';PretreMit()">Pr&#234;tre de Ts&eacute;d&egrave;q</button>
+                <button id="PretreN" type="button" class="button buttonClasse" style="visibility:visible;" onclick="cacherClasses();this.style.visibility='visible';PretreN()">Pr&#234;tre de N&eacute;lial</button>
+                <button id="PretreS" type="button" class="button buttonClasse" style="visibility:visible;" onclick="cacherClasses();this.style.visibility='visible';PretreS()">Pr&#234;tre de Saint-Cullt</button>
+                <button id="SylvanienC" type="button" class="button buttonClasse" style="visibility:visible;" onclick="cacherClasses();this.style.visibility='visible';SylvanienC()">Sylvanien (Classe/Race)</button>
+                <button id="Voleur" type="button" class="button buttonClasse" style="visibility:visible;" onclick="cacherClasses();this.style.visibility='visible';Voleur()">Voleur</button>
+        
+            </div>
+            <div class="grilleAlignements">
+                <button id="lb" type="button" class="button" onclick="cacherAlignements();this.style.visibility='visible';Lb();">Loyal-Bon</button>
+                <button id="ln" type="button" class="button" onclick="cacherAlignements();this.style.visibility='visible';Ln();">Loyal-Neutre</button>
+                <button id="lm" type="button" class="button" onclick="cacherAlignements();this.style.visibility='visible';Lm();">Loyal-Mauvais</button>
+                <button id="nb" type="button" class="button" onclick="cacherAlignements();this.style.visibility='visible';Nb();">Neutre-Bon</button>
+                <button id="ns" type="button" class="button" onclick="cacherAlignements();this.style.visibility='visible';Ns()">Neutre-Strict</button>
+                <button id="nm" type="button" class="button" onclick="cacherAlignements();this.style.visibility='visible';Nm()">Neutre-Mauvais</button>
+                <button id="cb" type="button" class="button" onclick="cacherAlignements();this.style.visibility='visible';Cb()">Chaotique-Bon</button>
+                <button id="cn" type="button" class="button" onclick="cacherAlignements();this.style.visibility='visible';Cn();">Chaotique-Neutre</button>
+                <button id="cm" type="button" class="button" onclick="cacherAlignements();this.style.visibility='visible';Cm()">Chaotique-Mauvais</button>
+                <button id="t" type="button" class="button" onclick="cacherAlignements();this.style.visibility='visible';T()">Territorial</button>
+                <button type="button" class="button" style='background-color:#999933'><a style="color: #18191A;" href='http://versebock.com/' target="_blank">Le site de Vers&eacute;bock</a></button>
+
+            </div>
+            <div class="grilleRaces">
+                <button id="Elfe" type="button" class="button" style="visibility:visible;" onclick="cacherRaces();this.style.visibility='visible';Elfe()">Elfes</button>
+                <button id="Drow" type="button" class="button" style="visibility:visible;" onclick="cacherRaces();this.style.visibility='visible';Drow()">Elfes noirs (Drows)</button>
+                <button id="FauniqueR" type="button" class="button" style="visibility:visible;" onclick="cacherRaces();this.style.visibility='visible';FauniqueR()">Fauniques (Race/Classe)</button>
+                <button id="Gobelin" type="button" class="button" style="visibility:visible;" onclick="cacherRaces();this.style.visibility='visible';Gobelin()">Gobelins</button>
+                <button id="Humain" type="button" class="button" style="visibility:visible;" onclick="cacherRaces();this.style.visibility='visible';Humain()">Humains</button>
+                <button id="Meurlock" type="button" class="button" style="visibility:visible;" onclick="cacherRaces();this.style.visibility='visible';Meurlock()">Meurlocks</button>
+                <button id="Nain" type="button" class="button" style="visibility:visible;" onclick="cacherRaces();this.style.visibility='visible';Nain()">Nains</button>
+                <button id="Orc" type="button" class="button" style="visibility:visible;" onclick="cacherRaces();this.style.visibility='visible';Orc()">Orcs</button>
+                <button id="PetitGens" type="button" class="button" style="visibility:visible;" onclick="cacherRaces();this.style.visibility='visible';PetitGens()">Petites-gens</button>
+                <button id="SylvanienR" type="button" class="button" style="visibility:visible;" onclick="cacherRaces();this.style.visibility='visible';SylvanienR()">Sylvanien (Race/Classe)</button>
+                <button type="button" class="button" style="background-color:red;visibility:visible" onclick="RESET();" >Reset</button>
+
+            </div>
+        </div>
+            </div>
+    </div>
+        <script>
+            function cacherClasses() {
+            document.getElementById('Barde').style.visibility='hidden';
+            document.getElementById('Chaman').style.visibility='hidden';
+            document.getElementById('Druide').style.visibility='hidden';
+            document.getElementById('FauniqueC').style.visibility='hidden';
+            document.getElementById('Guerrier').style.visibility='hidden';
+            document.getElementById('HommeDuPeuple').style.visibility='hidden';
+            document.getElementById('Necromancien').style.visibility='hidden';
+            document.getElementById('PaladinA').style.visibility='hidden';
+            document.getElementById('PaladinM').style.visibility='hidden';
+            document.getElementById('PaladinS').style.visibility='hidden';
+            document.getElementById('PretreAh').style.visibility='hidden';
+            document.getElementById('PretreAr').style.visibility='hidden';
+            document.getElementById('PretreB').style.visibility='hidden';
+            document.getElementById('PretreF').style.visibility='hidden';
+            document.getElementById('PretreG').style.visibility='hidden';
+            document.getElementById('PretreMie').style.visibility='hidden';
+            document.getElementById('PretreMit').style.visibility='hidden';
+            document.getElementById('PretreN').style.visibility='hidden';
+            document.getElementById('PretreS').style.visibility='hidden';
+            document.getElementById('SylvanienC').style.visibility='hidden';
+            document.getElementById('Voleur').style.visibility='hidden';
+            }
+          </script>
+          <script>
+            function cacherAlignements() {
+            document.getElementById('lb').style.visibility='hidden';
+            document.getElementById('ln').style.visibility='hidden';
+            document.getElementById('lm').style.visibility='hidden';
+            document.getElementById('nb').style.visibility='hidden';
+            document.getElementById('ns').style.visibility='hidden';
+            document.getElementById('nm').style.visibility='hidden';
+            document.getElementById('cb').style.visibility='hidden';
+            document.getElementById('cn').style.visibility='hidden';
+            document.getElementById('cm').style.visibility='hidden';
+            document.getElementById('t').style.visibility='hidden';
+            }
+            function cacherRaces(){
+            document.getElementById('Elfe').style.visibility='hidden';
+            document.getElementById('Drow').style.visibility='hidden';
+            document.getElementById('FauniqueR').style.visibility='hidden';
+            document.getElementById('Gobelin').style.visibility='hidden';
+            document.getElementById('Humain').style.visibility='hidden';
+            document.getElementById('Meurlock').style.visibility='hidden';
+            document.getElementById('Nain').style.visibility='hidden';
+            document.getElementById('Orc').style.visibility='hidden';
+            document.getElementById('PetitGens').style.visibility='hidden';
+            document.getElementById('SylvanienR').style.visibility='hidden';
+            }
+          </script>
+          <script>
+            
+          </script>
+          <script>
+            function Barde(){
+            document.getElementById('lb').style.visibility='hidden';
+            document.getElementById('lm').style.visibility='hidden';
+            document.getElementById('cm').style.visibility='hidden';
+            document.getElementById('FauniqueR').style.visibility='hidden';
+            document.getElementById('SylvanienR').style.visibility='hidden';}
+            function Chaman() {
+            document.getElementById('lb').style.visibility='hidden';
+            document.getElementById('ln').style.visibility='hidden';
+            document.getElementById('cm').style.visibility='hidden';
+            document.getElementById('Elfe').style.visibility='hidden';
+            document.getElementById('Drow').style.visibility='hidden';
+            document.getElementById('FauniqueR').style.visibility='hidden';
+            document.getElementById('Nain').style.visibility='hidden';
+            document.getElementById('SylvanienR').style.visibility='hidden';
+            }
+            function Druide() {
+            document.getElementById('lb').style.visibility='hidden';
+            document.getElementById('ln').style.visibility='hidden';
+            document.getElementById('lm').style.visibility='hidden';
+            document.getElementById('nm').style.visibility='hidden';
+            document.getElementById('cm').style.visibility='hidden';
+            document.getElementById('Drow').style.visibility='hidden';
+            document.getElementById('FauniqueR').style.visibility='hidden';
+            document.getElementById('Gobelin').style.visibility='hidden';
+            document.getElementById('Nain').style.visibility='hidden';
+            document.getElementById('Orc').style.visibility='hidden';
+            document.getElementById('SylvanienR').style.visibility='hidden';}
+            function FauniqueC() {
+            document.getElementById('lb').style.visibility='hidden';
+            document.getElementById('ln').style.visibility='hidden';
+            document.getElementById('lm').style.visibility='hidden';
+            document.getElementById('cb').style.visibility='hidden';
+            document.getElementById('cn').style.visibility='hidden';
+            document.getElementById('cm').style.visibility='hidden';
+            document.getElementById('t').style.visibility='hidden';
+            document.getElementById('Elfe').style.visibility='hidden';
+            document.getElementById('Drow').style.visibility='hidden';
+            document.getElementById('Gobelin').style.visibility='hidden';
+            document.getElementById('Humain').style.visibility='hidden';
+            document.getElementById('Meurlock').style.visibility='hidden';
+            document.getElementById('Nain').style.visibility='hidden';
+            document.getElementById('Orc').style.visibility='hidden';
+            document.getElementById('PetitGens').style.visibility='hidden';
+            document.getElementById('SylvanienR').style.visibility='hidden';}
+            function Guerrier() {
+            document.getElementById('FauniqueR').style.visibility='hidden';
+            document.getElementById('SylvanienR').style.visibility='hidden';}
+            function HommeDuPeuple() {
+            document.getElementById('FauniqueR').style.visibility='hidden';
+            document.getElementById('SylvanienR').style.visibility='hidden';}
+            function Necromancien() {
+            document.getElementById('lb').style.visibility='hidden';
+            document.getElementById('ln').style.visibility='hidden';
+            document.getElementById('nb').style.visibility='hidden';
+            document.getElementById('cb').style.visibility='hidden';
+            document.getElementById('cm').style.visibility='hidden';
+            document.getElementById('t').style.visibility='hidden';
+            document.getElementById('Elfe').style.visibility='hidden';
+            document.getElementById('FauniqueR').style.visibility='hidden';
+            document.getElementById('Gobelin').style.visibility='hidden';
+            document.getElementById('Meurlock').style.visibility='hidden';
+            document.getElementById('Nain').style.visibility='hidden';
+            document.getElementById('Orc').style.visibility='hidden';
+            document.getElementById('PetitGens').style.visibility='hidden';
+            document.getElementById('SylvanienR').style.visibility='hidden';}
+            function Paladin() {
+            document.getElementById('lm').style.visibility='hidden';
+            document.getElementById('nb').style.visibility='hidden';
+            document.getElementById('ns').style.visibility='hidden';
+            document.getElementById('nm').style.visibility='hidden';
+            document.getElementById('cb').style.visibility='hidden';
+            document.getElementById('cn').style.visibility='hidden';
+            document.getElementById('cm').style.visibility='hidden';
+            document.getElementById('t').style.visibility='hidden';
+            document.getElementById('Drow').style.visibility='hidden';
+            document.getElementById('FauniqueR').style.visibility='hidden';
+            document.getElementById('Gobelin').style.visibility='hidden';
+            document.getElementById('Meurlock').style.visibility='hidden';
+            document.getElementById('Orc').style.visibility='hidden';
+            document.getElementById('PetitGens').style.visibility='hidden';
+            document.getElementById('SylvanienR').style.visibility='hidden';}
+            function PretreAh() {
+            document.getElementById('ln').style.visibility='hidden';
+            document.getElementById('lm').style.visibility='hidden';
+            document.getElementById('ns').style.visibility='hidden';
+            document.getElementById('nm').style.visibility='hidden';
+            document.getElementById('cn').style.visibility='hidden';
+            document.getElementById('cm').style.visibility='hidden';
+            document.getElementById('t').style.visibility='hidden';
+            document.getElementById('Drow').style.visibility='hidden';
+            document.getElementById('FauniqueR').style.visibility='hidden';
+            document.getElementById('Gobelin').style.visibility='hidden';
+            document.getElementById('Meurlock').style.visibility='hidden';
+            document.getElementById('Orc').style.visibility='hidden';
+            document.getElementById('SylvanienR').style.visibility='hidden';}
+            function PretreAr() {
+            document.getElementById('lb').style.visibility='hidden';
+            document.getElementById('ln').style.visibility='hidden';
+            document.getElementById('nb').style.visibility='hidden';
+            document.getElementById('ns').style.visibility='hidden';
+            document.getElementById('nm').style.visibility='hidden';
+            document.getElementById('cb').style.visibility='hidden';
+            document.getElementById('cn').style.visibility='hidden';
+            document.getElementById('t').style.visibility='hidden';
+            document.getElementById('Elfe').style.visibility='hidden';
+            document.getElementById('FauniqueR').style.visibility='hidden';
+            document.getElementById('Gobelin').style.visibility='hidden';
+            document.getElementById('Meurlock').style.visibility='hidden';
+            document.getElementById('Nain').style.visibility='hidden';
+            document.getElementById('Orc').style.visibility='hidden';
+            document.getElementById('PetitGens').style.visibility='hidden';
+            document.getElementById('SylvanienR').style.visibility='hidden';}
+            function PretreB() {
+            document.getElementById('nb').style.visibility='hidden';
+            document.getElementById('ns').style.visibility='hidden';
+            document.getElementById('nm').style.visibility='hidden';
+            document.getElementById('t').style.visibility='hidden';
+            document.getElementById('Drow').style.visibility='hidden';
+            document.getElementById('FauniqueR').style.visibility='hidden';
+            document.getElementById('Gobelin').style.visibility='hidden';
+            document.getElementById('Meurlock').style.visibility='hidden';
+            document.getElementById('Orc').style.visibility='hidden';
+            document.getElementById('SylvanienR').style.visibility='hidden';}
+            function PretreF() {
+            document.getElementById('ln').style.visibility='hidden';
+            document.getElementById('lm').style.visibility='hidden';
+            document.getElementById('nm').style.visibility='hidden';
+            document.getElementById('cn').style.visibility='hidden';
+            document.getElementById('cm').style.visibility='hidden';
+            document.getElementById('t').style.visibility='hidden';
+            document.getElementById('Drow').style.visibility='hidden';
+            document.getElementById('FauniqueR').style.visibility='hidden';
+            document.getElementById('Gobelin').style.visibility='hidden';
+            document.getElementById('Meurlock').style.visibility='hidden';
+            document.getElementById('Orc').style.visibility='hidden';
+            document.getElementById('SylvanienR').style.visibility='hidden';}
+            function PretreG() {
+            document.getElementById('ln').style.visibility='hidden';
+            document.getElementById('lm').style.visibility='hidden';
+            document.getElementById('nm').style.visibility='hidden';
+            document.getElementById('cn').style.visibility='hidden';
+            document.getElementById('cm').style.visibility='hidden';
+            document.getElementById('t').style.visibility='hidden';
+            document.getElementById('Drow').style.visibility='hidden';
+            document.getElementById('FauniqueR').style.visibility='hidden';
+            document.getElementById('Gobelin').style.visibility='hidden';
+            document.getElementById('Meurlock').style.visibility='hidden';
+            document.getElementById('Orc').style.visibility='hidden';
+            document.getElementById('SylvanienR').style.visibility='hidden';}
+            function PretreMie() {
+            document.getElementById('lb').style.visibility='hidden';
+            document.getElementById('ln').style.visibility='hidden';
+            document.getElementById('nb').style.visibility='hidden';
+            document.getElementById('ns').style.visibility='hidden';
+            document.getElementById('cb').style.visibility='hidden';
+            document.getElementById('cn').style.visibility='hidden';
+            document.getElementById('t').style.visibility='hidden';
+            document.getElementById('Elfe').style.visibility='hidden';
+            document.getElementById('Drow').style.visibility='hidden';
+            document.getElementById('FauniqueR').style.visibility='hidden';
+            document.getElementById('Gobelin').style.visibility='hidden';
+            document.getElementById('Meurlock').style.visibility='hidden';
+            document.getElementById('Orc').style.visibility='hidden';
+            document.getElementById('PetitGens').style.visibility='hidden';
+            document.getElementById('SylvanienR').style.visibility='hidden';}
+            function PretreMit() {
+            document.getElementById('ln').style.visibility='hidden';
+            document.getElementById('lm').style.visibility='hidden';
+            document.getElementById('nb').style.visibility='hidden';
+            document.getElementById('ns').style.visibility='hidden';
+            document.getElementById('nm').style.visibility='hidden';
+            document.getElementById('cn').style.visibility='hidden';
+            document.getElementById('cm').style.visibility='hidden';
+            document.getElementById('t').style.visibility='hidden';
+            document.getElementById('Drow').style.visibility='hidden';
+            document.getElementById('FauniqueR').style.visibility='hidden';
+            document.getElementById('Gobelin').style.visibility='hidden';
+            document.getElementById('Meurlock').style.visibility='hidden';
+            document.getElementById('Orc').style.visibility='hidden';
+            document.getElementById('SylvanienR').style.visibility='hidden';}
+            function PretreN() {
+            document.getElementById('lb').style.visibility='hidden';
+            document.getElementById('ln').style.visibility='hidden';
+            document.getElementById('lm').style.visibility='hidden';
+            document.getElementById('t').style.visibility='hidden';
+            document.getElementById('Drow').style.visibility='hidden';
+            document.getElementById('FauniqueR').style.visibility='hidden';
+            document.getElementById('Gobelin').style.visibility='hidden';
+            document.getElementById('Meurlock').style.visibility='hidden';
+            document.getElementById('Orc').style.visibility='hidden';
+            document.getElementById('SylvanienR').style.visibility='hidden';}
+            function PretreS() {
+            document.getElementById('lm').style.visibility='hidden';
+            document.getElementById('nb').style.visibility='hidden';
+            document.getElementById('ns').style.visibility='hidden';
+            document.getElementById('nm').style.visibility='hidden';
+            document.getElementById('cb').style.visibility='hidden';
+            document.getElementById('cn').style.visibility='hidden';
+            document.getElementById('cm').style.visibility='hidden';
+            document.getElementById('t').style.visibility='hidden';
+            document.getElementById('Drow').style.visibility='hidden';
+            document.getElementById('FauniqueR').style.visibility='hidden';
+            document.getElementById('Gobelin').style.visibility='hidden';
+            document.getElementById('Meurlock').style.visibility='hidden';
+            document.getElementById('Orc').style.visibility='hidden';
+            document.getElementById('SylvanienR').style.visibility='hidden';}
+            function SylvanienC() {
+            document.getElementById('lb').style.visibility='hidden';
+            document.getElementById('ln').style.visibility='hidden';
+            document.getElementById('lm').style.visibility='hidden';
+            document.getElementById('nm').style.visibility='hidden';
+            document.getElementById('cb').style.visibility='hidden';
+            document.getElementById('cn').style.visibility='hidden';
+            document.getElementById('cm').style.visibility='hidden';
+            document.getElementById('t').style.visibility='hidden';
+            document.getElementById('Elfe').style.visibility='hidden';
+            document.getElementById('Drow').style.visibility='hidden';
+            document.getElementById('FauniqueR').style.visibility='hidden';
+            document.getElementById('Gobelin').style.visibility='hidden';
+            document.getElementById('Humain').style.visibility='hidden';
+            document.getElementById('Meurlock').style.visibility='hidden';
+            document.getElementById('Nain').style.visibility='hidden';
+            document.getElementById('Orc').style.visibility='hidden';
+            document.getElementById('PetitGens').style.visibility='hidden';}
+            function Voleur() {
+            document.getElementById('lb').style.visibility='hidden';
+            document.getElementById('t').style.visibility='hidden';
+            document.getElementById('Elfe').style.visibility='hidden';
+            document.getElementById('FauniqueR').style.visibility='hidden';
+            document.getElementById('Meurlock').style.visibility='hidden';
+            document.getElementById('Nain').style.visibility='hidden';
+            document.getElementById('Orc').style.visibility='hidden';
+            document.getElementById('SylvanienR').style.visibility='hidden';}
+          </script>
+          <script>
+            function Lb() {
+            document.getElementById('Barde').style.visibility='hidden';
+            document.getElementById('Chaman').style.visibility='hidden';
+            document.getElementById('Druide').style.visibility='hidden';
+            document.getElementById('FauniqueC').style.visibility='hidden';
+            document.getElementById('Necromancien').style.visibility='hidden';
+            document.getElementById('PretreAr').style.visibility='hidden';
+            document.getElementById('PretreMie').style.visibility='hidden';
+            document.getElementById('PretreN').style.visibility='hidden';
+            document.getElementById('SylvanienC').style.visibility='hidden';
+            document.getElementById('Voleur').style.visibility='hidden';
+            document.getElementById('Drow').style.visibility='hidden';
+            document.getElementById('FauniqueR').style.visibility='hidden';
+            document.getElementById('Gobelin').style.visibility='hidden';
+            document.getElementById('Meurlock').style.visibility='hidden';
+            document.getElementById('Orc').style.visibility='hidden';
+            document.getElementById('SylvanienR').style.visibility='hidden';}
+            function Ln() {
+            document.getElementById('Chaman').style.visibility='hidden';
+            document.getElementById('Druide').style.visibility='hidden';
+            document.getElementById('FauniqueC').style.visibility='hidden';
+            document.getElementById('Necromancien').style.visibility='hidden';
+            document.getElementById('PaladinA').style.visibility='hidden';
+            document.getElementById('PaladinM').style.visibility='hidden';
+            document.getElementById('PretreAh').style.visibility='hidden';
+            document.getElementById('PretreAr').style.visibility='hidden';
+            document.getElementById('PretreF').style.visibility='hidden';
+            document.getElementById('PretreG').style.visibility='hidden';
+            document.getElementById('PretreMie').style.visibility='hidden';
+            document.getElementById('PretreMit').style.visibility='hidden';
+            document.getElementById('PretreN').style.visibility='hidden';
+            document.getElementById('SylvanienC').style.visibility='hidden';
+            document.getElementById('Elfe').style.visibility='hidden';
+            document.getElementById('Drow').style.visibility='hidden';
+            document.getElementById('FauniqueR').style.visibility='hidden';
+            document.getElementById('Meurlock').style.visibility='hidden';
+            document.getElementById('Nain').style.visibility='hidden';
+            document.getElementById('Orc').style.visibility='hidden';
+            document.getElementById('PetitGens').style.visibility='hidden';
+            document.getElementById('SylvanienR').style.visibility='hidden';}
+            function Lm() {
+            document.getElementById('Barde').style.visibility='hidden';
+            document.getElementById('Druide').style.visibility='hidden';
+            document.getElementById('FauniqueC').style.visibility='hidden';
+            document.getElementById('PaladinA').style.visibility='hidden';
+            document.getElementById('PaladinM').style.visibility='hidden';
+            document.getElementById('PaladinS').style.visibility='hidden';
+            document.getElementById('PretreAh').style.visibility='hidden';
+            document.getElementById('PretreF').style.visibility='hidden';
+            document.getElementById('PretreG').style.visibility='hidden';
+            document.getElementById('PretreMit').style.visibility='hidden';
+            document.getElementById('PretreN').style.visibility='hidden';
+            document.getElementById('PretreS').style.visibility='hidden';
+            document.getElementById('SylvanienC').style.visibility='hidden';
+            document.getElementById('Elfe').style.visibility='hidden';
+            document.getElementById('FauniqueR').style.visibility='hidden';
+            document.getElementById('Meurlock').style.visibility='hidden';
+            document.getElementById('Nain').style.visibility='hidden';
+            document.getElementById('PetitGens').style.visibility='hidden';
+            document.getElementById('SylvanienR').style.visibility='hidden';}
+            function Nb() {
+            document.getElementById('Necromancien').style.visibility='hidden';
+            document.getElementById('PaladinA').style.visibility='hidden';
+            document.getElementById('PaladinM').style.visibility='hidden';
+            document.getElementById('PaladinS').style.visibility='hidden';
+            document.getElementById('PretreAr').style.visibility='hidden';
+            document.getElementById('PretreB').style.visibility='hidden';
+            document.getElementById('PretreMie').style.visibility='hidden';
+            document.getElementById('PretreMit').style.visibility='hidden';
+            document.getElementById('PretreS').style.visibility='hidden';
+            document.getElementById('Drow').style.visibility='hidden';
+            document.getElementById('Gobelin').style.visibility='hidden';
+            document.getElementById('Meurlock').style.visibility='hidden';
+            document.getElementById('Nain').style.visibility='hidden';
+            document.getElementById('Orc').style.visibility='hidden';}
+            function Ns() {
+            document.getElementById('PaladinA').style.visibility='hidden';
+            document.getElementById('PaladinM').style.visibility='hidden';
+            document.getElementById('PaladinS').style.visibility='hidden';
+            document.getElementById('PretreAh').style.visibility='hidden';
+            document.getElementById('PretreAr').style.visibility='hidden';
+            document.getElementById('PretreB').style.visibility='hidden';
+            document.getElementById('PretreMie').style.visibility='hidden';
+            document.getElementById('PretreMit').style.visibility='hidden';
+            document.getElementById('PretreS').style.visibility='hidden';
+            document.getElementById('Elfe').style.visibility='hidden';
+            document.getElementById('Drow').style.visibility='hidden';
+            document.getElementById('Gobelin').style.visibility='hidden';
+            document.getElementById('Meurlock').style.visibility='hidden';
+            document.getElementById('Orc').style.visibility='hidden';}
+            function Nm() {
+            document.getElementById('Druide').style.visibility='hidden';
+            document.getElementById('PaladinA').style.visibility='hidden';
+            document.getElementById('PaladinM').style.visibility='hidden';
+            document.getElementById('PaladinS').style.visibility='hidden';
+            document.getElementById('PretreAh').style.visibility='hidden';
+            document.getElementById('PretreAr').style.visibility='hidden';
+            document.getElementById('PretreB').style.visibility='hidden';
+            document.getElementById('PretreF').style.visibility='hidden';
+            document.getElementById('PretreG').style.visibility='hidden';
+            document.getElementById('PretreMit').style.visibility='hidden';
+            document.getElementById('PretreS').style.visibility='hidden';
+            document.getElementById('SylvanienC').style.visibility='hidden';
+            document.getElementById('Elfe').style.visibility='hidden';
+            document.getElementById('Drow').style.visibility='hidden';
+            document.getElementById('Meurlock').style.visibility='hidden';
+            document.getElementById('PetitGens').style.visibility='hidden';
+            document.getElementById('SylvanienR').style.visibility='hidden';}
+            function Cb() {
+            document.getElementById('FauniqueC').style.visibility='hidden';
+            document.getElementById('Necromancien').style.visibility='hidden';
+            document.getElementById('PaladinA').style.visibility='hidden';
+            document.getElementById('PaladinM').style.visibility='hidden';
+            document.getElementById('PaladinS').style.visibility='hidden';
+            document.getElementById('PretreAr').style.visibility='hidden';
+            document.getElementById('PretreMie').style.visibility='hidden';
+            document.getElementById('PretreS').style.visibility='hidden';
+            document.getElementById('SylvanienC').style.visibility='hidden';
+            document.getElementById('Drow').style.visibility='hidden';
+            document.getElementById('FauniqueR').style.visibility='hidden';
+            document.getElementById('Gobelin').style.visibility='hidden';
+            document.getElementById('Meurlock').style.visibility='hidden';
+            document.getElementById('Orc').style.visibility='hidden';
+            document.getElementById('PetitGens').style.visibility='hidden';
+            document.getElementById('SylvanienR').style.visibility='hidden';}
+            function Cn() {
+            document.getElementById('FauniqueC').style.visibility='hidden';
+            document.getElementById('PaladinA').style.visibility='hidden';
+            document.getElementById('PaladinM').style.visibility='hidden';
+            document.getElementById('PaladinS').style.visibility='hidden';
+            document.getElementById('PretreAh').style.visibility='hidden';
+            document.getElementById('PretreAr').style.visibility='hidden';
+            document.getElementById('PretreF').style.visibility='hidden';
+            document.getElementById('PretreG').style.visibility='hidden';
+            document.getElementById('PretreMie').style.visibility='hidden';
+            document.getElementById('PretreMit').style.visibility='hidden';
+            document.getElementById('PretreS').style.visibility='hidden';
+            document.getElementById('SylvanienC').style.visibility='hidden';
+            document.getElementById('Elfe').style.visibility='hidden';
+            document.getElementById('FauniqueR').style.visibility='hidden';
+            document.getElementById('Meurlock').style.visibility='hidden';
+            document.getElementById('Nain').style.visibility='hidden';
+            document.getElementById('PetitGens').style.visibility='hidden';
+            document.getElementById('SylvanienR').style.visibility='hidden';}
+            function Cm() {
+            document.getElementById('Barde').style.visibility='hidden';
+            document.getElementById('Chaman').style.visibility='hidden';
+            document.getElementById('Druide').style.visibility='hidden';
+            document.getElementById('FauniqueC').style.visibility='hidden';
+            document.getElementById('Necromancien').style.visibility='hidden';
+            document.getElementById('PaladinA').style.visibility='hidden';
+            document.getElementById('PaladinM').style.visibility='hidden';
+            document.getElementById('PaladinS').style.visibility='hidden';
+            document.getElementById('PretreAh').style.visibility='hidden';
+            document.getElementById('PretreF').style.visibility='hidden';
+            document.getElementById('PretreG').style.visibility='hidden';
+            document.getElementById('PretreMit').style.visibility='hidden';
+            document.getElementById('PretreS').style.visibility='hidden';
+            document.getElementById('SylvanienC').style.visibility='hidden';
+            document.getElementById('Elfe').style.visibility='hidden';
+            document.getElementById('FauniqueR').style.visibility='hidden';
+            document.getElementById('Meurlock').style.visibility='hidden';
+            document.getElementById('Nain').style.visibility='hidden';
+            document.getElementById('PetitGens').style.visibility='hidden';
+            document.getElementById('SylvanienR').style.visibility='hidden';}
+            function T() {
+            document.getElementById('FauniqueC').style.visibility='hidden';
+            document.getElementById('Necromancien').style.visibility='hidden';
+            document.getElementById('PaladinA').style.visibility='hidden';
+            document.getElementById('PaladinM').style.visibility='hidden';
+            document.getElementById('PaladinS').style.visibility='hidden';
+            document.getElementById('PretreAh').style.visibility='hidden';
+            document.getElementById('PretreAr').style.visibility='hidden';
+            document.getElementById('PretreB').style.visibility='hidden';
+            document.getElementById('PretreF').style.visibility='hidden';
+            document.getElementById('PretreG').style.visibility='hidden';
+            document.getElementById('PretreMie').style.visibility='hidden';
+            document.getElementById('PretreMit').style.visibility='hidden';
+            document.getElementById('PretreN').style.visibility='hidden';
+            document.getElementById('PretreS').style.visibility='hidden';
+            document.getElementById('SylvanienC').style.visibility='hidden';
+            document.getElementById('Voleur').style.visibility='hidden';
+            document.getElementById('Elfe').style.visibility='hidden';
+            document.getElementById('Drow').style.visibility='hidden';
+            document.getElementById('FauniqueR').style.visibility='hidden';
+            document.getElementById('Gobelin').style.visibility='hidden';
+            document.getElementById('Humain').style.visibility='hidden';
+            document.getElementById('Nain').style.visibility='hidden';
+            document.getElementById('Orc').style.visibility='hidden';
+            document.getElementById('PetitGens').style.visibility='hidden';
+            document.getElementById('SylvanienR').style.visibility='hidden';}
+          </script>
+          <script>
+            function Elfe() {
+            document.getElementById('Chaman').style.visibility='hidden';
+            document.getElementById('FauniqueC').style.visibility='hidden';
+            document.getElementById('Necromancien').style.visibility='hidden';
+            document.getElementById('PretreAr').style.visibility='hidden';
+            document.getElementById('PretreMie').style.visibility='hidden';
+            document.getElementById('SylvanienC').style.visibility='hidden';
+            document.getElementById('Voleur').style.visibility='hidden';
+            document.getElementById('ln').style.visibility='hidden';
+            document.getElementById('lm').style.visibility='hidden';
+            document.getElementById('ns').style.visibility='hidden';
+            document.getElementById('nm').style.visibility='hidden';
+            document.getElementById('cn').style.visibility='hidden';
+            document.getElementById('cm').style.visibility='hidden';
+            document.getElementById('t').style.visibility='hidden';}
+            function Drow() {
+            document.getElementById('Chaman').style.visibility='hidden';
+            document.getElementById('Druide').style.visibility='hidden';
+            document.getElementById('FauniqueC').style.visibility='hidden';
+            document.getElementById('PaladinA').style.visibility='hidden';
+            document.getElementById('PaladinM').style.visibility='hidden';
+            document.getElementById('PaladinS').style.visibility='hidden';
+            document.getElementById('PretreAh').style.visibility='hidden';
+            document.getElementById('PretreB').style.visibility='hidden';
+            document.getElementById('PretreF').style.visibility='hidden';
+            document.getElementById('PretreG').style.visibility='hidden';
+            document.getElementById('PretreMie').style.visibility='hidden';
+            document.getElementById('PretreMit').style.visibility='hidden';
+            document.getElementById('PretreN').style.visibility='hidden';
+            document.getElementById('PretreS').style.visibility='hidden';
+            document.getElementById('SylvanienC').style.visibility='hidden';
+            document.getElementById('lb').style.visibility='hidden';
+            document.getElementById('ln').style.visibility='hidden';
+            document.getElementById('nb').style.visibility='hidden';
+            document.getElementById('ns').style.visibility='hidden';
+            document.getElementById('nm').style.visibility='hidden';
+            document.getElementById('cb').style.visibility='hidden';
+            document.getElementById('t').style.visibility='hidden';}
+            function FauniqueR() {
+            document.getElementById('Barde').style.visibility='hidden';
+            document.getElementById('Chaman').style.visibility='hidden';
+            document.getElementById('Druide').style.visibility='hidden';
+            document.getElementById('Guerrier').style.visibility='hidden';
+            document.getElementById('HommeDuPeuple').style.visibility='hidden';
+            document.getElementById('Necromancien').style.visibility='hidden';
+            document.getElementById('PaladinA').style.visibility='hidden';
+            document.getElementById('PaladinM').style.visibility='hidden';
+            document.getElementById('PaladinS').style.visibility='hidden';
+            document.getElementById('PretreAh').style.visibility='hidden';
+            document.getElementById('PretreAr').style.visibility='hidden';
+            document.getElementById('PretreB').style.visibility='hidden';
+            document.getElementById('PretreF').style.visibility='hidden';
+            document.getElementById('PretreG').style.visibility='hidden';
+            document.getElementById('PretreMie').style.visibility='hidden';
+            document.getElementById('PretreMit').style.visibility='hidden';
+            document.getElementById('PretreN').style.visibility='hidden';
+            document.getElementById('PretreS').style.visibility='hidden';
+            document.getElementById('SylvanienC').style.visibility='hidden';
+            document.getElementById('Voleur').style.visibility='hidden';
+            document.getElementById('lb').style.visibility='hidden';
+            document.getElementById('ln').style.visibility='hidden';
+            document.getElementById('lm').style.visibility='hidden';
+            document.getElementById('cb').style.visibility='hidden';
+            document.getElementById('cn').style.visibility='hidden';
+            document.getElementById('cm').style.visibility='hidden';
+            document.getElementById('t').style.visibility='hidden';}
+            function Gobelin() {
+            document.getElementById('Druide').style.visibility='hidden';
+            document.getElementById('FauniqueC').style.visibility='hidden';
+            document.getElementById('Necromancien').style.visibility='hidden';
+            document.getElementById('PaladinA').style.visibility='hidden';
+            document.getElementById('PaladinM').style.visibility='hidden';
+            document.getElementById('PaladinS').style.visibility='hidden';
+            document.getElementById('PretreAh').style.visibility='hidden';
+            document.getElementById('PretreAr').style.visibility='hidden';
+            document.getElementById('PretreB').style.visibility='hidden';
+            document.getElementById('PretreF').style.visibility='hidden';
+            document.getElementById('PretreG').style.visibility='hidden';
+            document.getElementById('PretreMie').style.visibility='hidden';
+            document.getElementById('PretreMit').style.visibility='hidden';
+            document.getElementById('PretreN').style.visibility='hidden';
+            document.getElementById('PretreS').style.visibility='hidden';
+            document.getElementById('SylvanienC').style.visibility='hidden';
+            document.getElementById('lb').style.visibility='hidden';
+            document.getElementById('nb').style.visibility='hidden';
+            document.getElementById('ns').style.visibility='hidden';
+            document.getElementById('cb').style.visibility='hidden';
+            document.getElementById('t').style.visibility='hidden';}
+            function Humain() {
+            document.getElementById('FauniqueC').style.visibility='hidden';
+            document.getElementById('SylvanienC').style.visibility='hidden';
+            document.getElementById('t').style.visibility='hidden';}
+            function Meurlock() {
+            document.getElementById('FauniqueC').style.visibility='hidden';
+            document.getElementById('Necromancien').style.visibility='hidden';
+            document.getElementById('PaladinA').style.visibility='hidden';
+            document.getElementById('PaladinM').style.visibility='hidden';
+            document.getElementById('PaladinS').style.visibility='hidden';
+            document.getElementById('PretreAh').style.visibility='hidden';
+            document.getElementById('PretreAr').style.visibility='hidden';
+            document.getElementById('PretreB').style.visibility='hidden';
+            document.getElementById('PretreF').style.visibility='hidden';
+            document.getElementById('PretreG').style.visibility='hidden';
+            document.getElementById('PretreMie').style.visibility='hidden';
+            document.getElementById('PretreMit').style.visibility='hidden';
+            document.getElementById('PretreN').style.visibility='hidden';
+            document.getElementById('PretreS').style.visibility='hidden';
+            document.getElementById('SylvanienC').style.visibility='hidden';
+            document.getElementById('Voleur').style.visibility='hidden';
+            document.getElementById('lb').style.visibility='hidden';
+            document.getElementById('ln').style.visibility='hidden';
+            document.getElementById('lm').style.visibility='hidden';
+            document.getElementById('nb').style.visibility='hidden';
+            document.getElementById('ns').style.visibility='hidden';
+            document.getElementById('nm').style.visibility='hidden';
+            document.getElementById('cb').style.visibility='hidden';
+            document.getElementById('cn').style.visibility='hidden';
+            document.getElementById('cm').style.visibility='hidden';}
+            function Nain() {
+            document.getElementById('Chaman').style.visibility='hidden';
+            document.getElementById('Druide').style.visibility='hidden';
+            document.getElementById('FauniqueC').style.visibility='hidden';
+            document.getElementById('Necromancien').style.visibility='hidden';
+            document.getElementById('PretreAr').style.visibility='hidden';
+            document.getElementById('SylvanienC').style.visibility='hidden';
+            document.getElementById('Voleur').style.visibility='hidden';
+            document.getElementById('ln').style.visibility='hidden';
+            document.getElementById('lm').style.visibility='hidden';
+            document.getElementById('nb').style.visibility='hidden';
+            document.getElementById('cn').style.visibility='hidden';
+            document.getElementById('cm').style.visibility='hidden';
+            document.getElementById('t').style.visibility='hidden';}
+            function Orc() {
+            document.getElementById('Druide').style.visibility='hidden';
+            document.getElementById('FauniqueC').style.visibility='hidden';
+            document.getElementById('Necromancien').style.visibility='hidden';
+            document.getElementById('PaladinA').style.visibility='hidden';
+            document.getElementById('PaladinM').style.visibility='hidden';
+            document.getElementById('PaladinS').style.visibility='hidden';
+            document.getElementById('PretreAh').style.visibility='hidden';
+            document.getElementById('PretreAr').style.visibility='hidden';
+            document.getElementById('PretreB').style.visibility='hidden';
+            document.getElementById('PretreF').style.visibility='hidden';
+            document.getElementById('PretreG').style.visibility='hidden';
+            document.getElementById('PretreMie').style.visibility='hidden';
+            document.getElementById('PretreMit').style.visibility='hidden';
+            document.getElementById('PretreN').style.visibility='hidden';
+            document.getElementById('PretreS').style.visibility='hidden';
+            document.getElementById('SylvanienC').style.visibility='hidden';
+            document.getElementById('Voleur').style.visibility='hidden';
+            document.getElementById('lb').style.visibility='hidden';
+            document.getElementById('ln').style.visibility='hidden';
+            document.getElementById('nb').style.visibility='hidden';
+            document.getElementById('ns').style.visibility='hidden';
+            document.getElementById('cb').style.visibility='hidden';
+            document.getElementById('t').style.visibility='hidden';}
+            function PetitGens() {
+            document.getElementById('Druide').style.visibility='hidden';
+            document.getElementById('FauniqueC').style.visibility='hidden';
+            document.getElementById('Necromancien').style.visibility='hidden';
+            document.getElementById('PaladinA').style.visibility='hidden';
+            document.getElementById('PaladinM').style.visibility='hidden';
+            document.getElementById('PaladinS').style.visibility='hidden';
+            document.getElementById('PretreAr').style.visibility='hidden';
+            document.getElementById('PretreMie').style.visibility='hidden';
+            document.getElementById('SylvanienC').style.visibility='hidden';
+            document.getElementById('ln').style.visibility='hidden';
+            document.getElementById('lm').style.visibility='hidden';
+            document.getElementById('nm').style.visibility='hidden';
+            document.getElementById('cb').style.visibility='hidden';
+            document.getElementById('cn').style.visibility='hidden';
+            document.getElementById('cm').style.visibility='hidden';
+            document.getElementById('t').style.visibility='hidden';}
+            function SylvanienR() {
+            document.getElementById('Barde').style.visibility='hidden';
+            document.getElementById('Chaman').style.visibility='hidden';
+            document.getElementById('Druide').style.visibility='hidden';
+            document.getElementById('FauniqueC').style.visibility='hidden';
+            document.getElementById('Guerrier').style.visibility='hidden';
+            document.getElementById('HommeDuPeuple').style.visibility='hidden';
+            document.getElementById('Necromancien').style.visibility='hidden';
+            document.getElementById('PaladinA').style.visibility='hidden';
+            document.getElementById('PaladinM').style.visibility='hidden';
+            document.getElementById('PaladinS').style.visibility='hidden';
+            document.getElementById('PretreAh').style.visibility='hidden';
+            document.getElementById('PretreAr').style.visibility='hidden';
+            document.getElementById('PretreB').style.visibility='hidden';
+            document.getElementById('PretreF').style.visibility='hidden';
+            document.getElementById('PretreG').style.visibility='hidden';
+            document.getElementById('PretreMie').style.visibility='hidden';
+            document.getElementById('PretreMit').style.visibility='hidden';
+            document.getElementById('PretreN').style.visibility='hidden';
+            document.getElementById('PretreS').style.visibility='hidden';
+            document.getElementById('Voleur').style.visibility='hidden';
+            document.getElementById('lb').style.visibility='hidden';
+            document.getElementById('ln').style.visibility='hidden';
+            document.getElementById('lm').style.visibility='hidden';
+            document.getElementById('nm').style.visibility='hidden';
+            document.getElementById('cb').style.visibility='hidden';
+            document.getElementById('cn').style.visibility='hidden';
+            document.getElementById('cm').style.visibility='hidden';
+            document.getElementById('t').style.visibility='hidden';}
+          </script>
+        <script>
+          function RESET(){
+          document.getElementById('Barde').style.visibility='visible';
+          document.getElementById('Chaman').style.visibility='visible';
+          document.getElementById('Druide').style.visibility='visible';
+          document.getElementById('FauniqueC').style.visibility='visible';
+          document.getElementById('Guerrier').style.visibility='visible';
+          document.getElementById('HommeDuPeuple').style.visibility='visible';
+          document.getElementById('Necromancien').style.visibility='visible';
+          document.getElementById('PaladinA').style.visibility='visible';
+          document.getElementById('PaladinM').style.visibility='visible';
+          document.getElementById('PaladinS').style.visibility='visible';
+          document.getElementById('PretreAh').style.visibility='visible';
+          document.getElementById('PretreAr').style.visibility='visible';
+          document.getElementById('PretreB').style.visibility='visible';
+          document.getElementById('PretreF').style.visibility='visible';
+          document.getElementById('PretreG').style.visibility='visible';
+          document.getElementById('PretreMie').style.visibility='visible';
+          document.getElementById('PretreMit').style.visibility='visible';
+          document.getElementById('PretreN').style.visibility='visible';
+          document.getElementById('PretreS').style.visibility='visible';
+          document.getElementById('SylvanienC').style.visibility='visible';
+          document.getElementById('Voleur').style.visibility='visible';
+          document.getElementById('lb').style.visibility='visible';
+          document.getElementById('ln').style.visibility='visible';
+          document.getElementById('lm').style.visibility='visible';
+          document.getElementById('nb').style.visibility='visible';
+          document.getElementById('ns').style.visibility='visible';
+          document.getElementById('nm').style.visibility='visible';
+          document.getElementById('cb').style.visibility='visible';
+          document.getElementById('cn').style.visibility='visible';
+          document.getElementById('cm').style.visibility='visible';
+          document.getElementById('t').style.visibility='visible';
+          document.getElementById('Elfe').style.visibility='visible';
+          document.getElementById('Drow').style.visibility='visible';
+          document.getElementById('FauniqueR').style.visibility='visible';
+          document.getElementById('Gobelin').style.visibility='visible';
+          document.getElementById('Humain').style.visibility='visible';
+          document.getElementById('Meurlock').style.visibility='visible';
+          document.getElementById('Nain').style.visibility='visible';
+          document.getElementById('Orc').style.visibility='visible';
+          document.getElementById('PetitGens').style.visibility='visible';
+          document.getElementById('SylvanienR').style.visibility='visible';
+          }
+          </script>
+    </head>
+</html>
