@@ -352,6 +352,9 @@
           </button>
           <button id='ChangerClasse' type="button" class="button" onclick="ChangerDeClasse();">Changer de
             classe</button>
+          <button id="genererFiche" type="button" class="button" style="background-color: whitesmoke;color: #000;"
+            onclick="genererFiche()">G&eacute;n&eacute;rer la fiche imprimable
+            &#128438;</button>
         </div>
         <div class="grilleCompetences">
           <button id='Comp&' type="button" class="button buttonCompetence">&darr;Comp&eacute;tences&darr; Niveau&rarr;
@@ -890,13 +893,13 @@
           visibleVertu();
         }
         if (NiveauActuel < NiveauActuelB) {
-          NbPointF(ptsDepart, ptsParNiveau, NiveauActuel);
+          NbPoint = NbPointF(ptsDepart, ptsParNiveau, NiveauActuel);
           resetGrille();
         } else {
           NbPointB = NbPoint; //todo: optimiser le code
-          NbPointF(ptsDepart, ptsParNiveau, NiveauActuelB);
+          NbPoint = NbPointF(ptsDepart, ptsParNiveau, NiveauActuelB);
           NbPointB = NbPoint - NbPointB;
-          NbPointF(ptsDepart, ptsParNiveau, NiveauActuel);
+          NbPoint = NbPointF(ptsDepart, ptsParNiveau, NiveauActuel);
           NbPoint -= NbPointB;
         }
         modifierNbPoints(0);
@@ -905,6 +908,7 @@
     }
 
     function resetGrille() {
+
       switch (Classe) {
         case "Barde":
           Barde();
@@ -1579,7 +1583,7 @@
       document.getElementById("C13").innerHTML = "Herboristerie";
       document.getElementById("C14").innerHTML = "Lecture et \u{00E9}criture";
       document.getElementById("C15").innerHTML = "M\u{00E9}ditation ";
-      document.getElementById("C16").innerHTML = "Œil de lynx";
+      document.getElementById("C16").innerHTML = "\u{0152}il de lynx";
       document.getElementById("C17").innerHTML = "Poison ";
       document.getElementById("C18").innerHTML = "R\u{00E9}paration d\u{2019}armes et d\u{2019}armures";
       document.getElementById("C19").innerHTML = "R\u{00E9}sistance \u{00E0} la torture ";
@@ -4596,14 +4600,16 @@
       boutonNbPoints.innerHTML = "Points de comp&eacute;tence: " + NbPoint;
     }
     function NbPointF(PointsDeDepart, PointsParMonteeDeNiveau, Niveau) {
-      NbPoint = PointsDeDepart + (PointsParMonteeDeNiveau * (Niveau - 1))
+      let nbPtsTot = PointsDeDepart + (PointsParMonteeDeNiveau * (Niveau - 1))
       document.getElementById("NbPoint").style.visibility = "visible";
       document.getElementById("NbPoint").style.display = "inline";
+      return nbPtsTot;
     }
 
     /* buttons visibility=visible */
     function VisibleCompetences(nbDeCompetences) {
       document.getElementById('ChangerClasse').style.visibility = 'visible';
+      document.getElementById("genererFiche").style.visibility = 'visible';
       listCompetences = document.getElementsByClassName('grilleCompetences')[0].children;
       listButtonN1 = document.getElementsByClassName('niveau1')[0].children;
       listButtonN2 = document.getElementsByClassName('niveau2')[0].children;
@@ -4651,6 +4657,7 @@
 
     function hiddenCompetences(nbDeCompetences) {
       document.getElementById('ChangerClasse').style.visibility = 'hidden';
+      document.getElementById('genererFiche').style.visibility = 'hidden';
       document.getElementById('NbPoint').style.visibility = 'hidden';
       listCompetences = document.getElementsByClassName('grilleCompetences')[0].children;
       listButtonN1 = document.getElementsByClassName('niveau1')[0].children;
@@ -4694,6 +4701,43 @@
     }
     function ChangerDeClasse() {
       open("GrilleMonteeNiveau.html", "_self");
+    }
+
+    function genererFiche() {
+      if (NbPoint < 0) {
+        alert("Veuillez-vous assurer d'avoir un nombre de points de compétences qui n'est pas inférieur à 0. Votre nombre de points actuel est de " + NbPoint);
+      } else {
+        let params = new URLSearchParams({ classe: Classe, niveau: NiveauActuel, nbPv: nombrePv, "ptsDepart": ptsDepart, "ptsParNiveau": ptsParNiveau, "nbPoint": NbPoint });
+        if (aMana) {
+          params.set("ptsMana", ptsMana);
+        } else if (aVertu) {
+          params.set("ptsVertu", 3*NiveauActuel);
+        }
+        /**
+         * dictionnaire tel que :
+         * key = nom de la compétence
+         * value = [nombre de niveaux appris de la compétence, coût de ces niveaux]
+         */
+        //let competencesPrises = {};
+        for (let numeroCompetence = 0; numeroCompetence < listeNiveauxCompetences.length; numeroCompetence++) {
+          //competencesPrises["e"] = [1, 1];
+          let nbNiveaux = 0;
+          let coutTot = 0;
+          let verifierCompSuiv = true;
+          for (let niveauComp = 0; niveauComp < listeNiveauxCompetences[numeroCompetence].length && verifierCompSuiv; niveauComp++) {
+            verifierCompSuiv = estPrise(numeroCompetence + 1, niveauComp + 1);
+            if (verifierCompSuiv) {
+              nbNiveaux += 1;
+              coutTot += listeNiveauxCompetences[numeroCompetence][niveauComp];
+            }
+          }
+          if (coutTot != 0) {
+            params.set(listCompetences[numeroCompetence + 1].innerHTML, [nbNiveaux, coutTot]);
+          }
+        }
+        //params.set("competences", competencesPrises);
+        open("form.html?" + params.toString());
+      }
     }
 
 
